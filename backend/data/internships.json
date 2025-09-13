@@ -1,0 +1,470 @@
+[
+  {
+    "id": 1,
+    "title": "Web Development Intern",
+    "company": "ABC EdTech",
+    "location": "Jammu",
+    "start_date": "2025-10-01",
+    "duration": "2 months",
+    "stipend": "₹4000/month"
+  },
+  {
+    "id": 2,
+    "title": "Content Writer Intern",
+    "company": "SkillUp India",
+    "location": "Srinagar",
+    "start_date": "2025-09-15",
+    "duration": "1 month",
+    "stipend": "₹3000/month"
+  },
+  {
+    "id": 3,
+    "title": "Digital Marketing Intern",
+    "company": "EdServe",
+    "location": "Baramulla",
+    "start_date": "2025-11-01",
+    "duration": "3 months",
+    "stipend": "₹3500/month"
+  },
+  {
+    "id": 4,
+    "title": "Graphic Design Intern",
+    "company": "Creatify Studio",
+    "location": "Jammu",
+    "start_date": "2025-09-20",
+    "duration": "2 months",
+    "stipend": "₹5000/month"
+  },
+  {
+    "id": 5,
+    "title": "Social Media Manager Intern",
+    "company": "BrandBoost",
+    "location": "Srinagar",
+    "start_date": "2025-10-05",
+    "duration": "3 months",
+    "stipend": "₹4500/month"
+  },
+  {
+    "id": 6,
+    "title": "Mobile App Development Intern",
+    "company": "TechSolutions",
+    "location": "Pulwama",
+    "start_date": "2025-09-25",
+    "duration": "4 months",
+    "stipend": "₹6000/month"
+  },
+  {
+    "id": 7,
+    "title": "Data Analyst Intern",
+    "company": "Insight Analytics",
+    "location": "Jammu",
+    "start_date": "2025-10-10",
+    "duration": "2 months",
+    "stipend": "₹5500/month"
+  },
+  {
+    "id": 8,
+    "title": "Research Assistant Intern",
+    "company": "EduResearch Labs",
+    "location": "Anantnag",
+    "start_date": "2025-09-18",
+    "duration": "1 month",
+    "stipend": "₹4000/month"
+  },
+  {
+    "id": 9,
+    "title": "Cybersecurity Intern",
+    "company": "SecureNet",
+    "location": "Srinagar",
+    "start_date": "2025-11-05",
+    "duration": "3 months",
+    "stipend": "₹7000/month"
+  },
+  {
+    "id": 10,
+    "title": "AI/ML Intern",
+    "company": "FutureAI",
+    "location": "Jammu",
+    "start_date": "2025-09-30",
+    "duration": "3 months",
+    "stipend": "₹8000/month"
+  },
+  {
+    "id": 11,
+    "title": "HR Intern",
+    "company": "PeopleFirst",
+    "location": "Kathua",
+    "start_date": "2025-10-01",
+    "duration": "2 months",
+    "stipend": "₹4000/month"
+  },
+  {
+    "id": 12,
+    "title": "Finance Intern",
+    "company": "J&K FinCorp",
+    "location": "Srinagar",
+    "start_date": "2025-09-22",
+    "duration": "2 months",
+    "stipend": "₹5000/month"
+  },
+  {
+    "id": 13,
+    "title": "SEO Intern",
+    "company": "Rankify",
+    "location": "Jammu",
+    "start_date": "2025-10-15",
+    "duration": "1 month",
+    "stipend": "₹3500/month"
+  },
+  {
+    "id": 14,
+    "title": "Business Development Intern",
+    "company": "GrowthHub",
+    "location": "Pulwama",
+    "start_date": "2025-09-25",
+    "duration": "3 months",
+    "stipend": "₹5000/month"
+  },
+  {
+    "id": 15,
+    "title": "Operations Intern",
+    "company": "LogiTrack",
+    "location": "Jammu",
+    "start_date": "2025-10-05",
+    "duration": "2 months",
+    "stipend": "₹4500/month"
+  },
+  {
+    "id": 16,
+    "title": "UI/UX Design Intern",
+    "company": "DesignWorks",
+    "location": "Srinagar",
+    "start_date": "2025-09-28",
+    "duration": "2 months",
+    "stipend": "₹5500/month"
+  },
+  {
+    "id": 17,
+    "title": "Photography Intern",
+    "company": "Capture Studios",
+    "location": "Baramulla",
+    "start_date": "2025-10-02",
+    "duration": "1 month",
+    "stipend": "₹3000/month"
+  },
+  {
+    "id": 18,
+    "title": "Video Editing Intern",
+    "company": "FilmCraft",
+    "location": "Jammu",
+    "start_date": "2025-10-12",
+    "duration": "2 months",
+    "stipend": "₹4000/month"
+  },
+  {
+    "id": 19,
+    "title": "Event Management Intern",
+    "company": "EventSphere",
+    "location": "Srinagar",
+    "start_date": "2025-11-01",
+    "duration": "3 months",
+    "stipend": "₹5000/month"
+  },
+  {
+    "id": 20,
+    "title": "Legal Intern",
+    "company": "LawConnect",
+    "location": "Jammu",
+    "start_date": "2025-09-20",
+    "duration": "1 month",
+    "stipend": "₹3500/month"
+  },
+  {
+    "id": 21,
+    "title": "Journalism Intern",
+    "company": "Valley Times",
+    "location": "Srinagar",
+    "start_date": "2025-09-25",
+    "duration": "2 months",
+    "stipend": "₹4000/month"
+  },
+  {
+    "id": 22,
+    "title": "Sales Intern",
+    "company": "RetailPro",
+    "location": "Anantnag",
+    "start_date": "2025-10-03",
+    "duration": "2 months",
+    "stipend": "₹4500/month"
+  },
+  {
+    "id": 23,
+    "title": "Customer Support Intern",
+    "company": "HelpDesk24",
+    "location": "Jammu",
+    "start_date": "2025-09-22",
+    "duration": "1 month",
+    "stipend": "₹3500/month"
+  },
+  {
+    "id": 24,
+    "title": "Research Intern",
+    "company": "ThinkTank Labs",
+    "location": "Srinagar",
+    "start_date": "2025-09-28",
+    "duration": "2 months",
+    "stipend": "₹5000/month"
+  },
+  {
+    "id": 25,
+    "title": "Marketing Intern",
+    "company": "AdVision",
+    "location": "Kupwara",
+    "start_date": "2025-10-07",
+    "duration": "3 months",
+    "stipend": "₹4000/month"
+  },
+  {
+    "id": 26,
+    "title": "Teaching Assistant Intern",
+    "company": "LearnMore Academy",
+    "location": "Jammu",
+    "start_date": "2025-09-23",
+    "duration": "2 months",
+    "stipend": "₹3000/month"
+  },
+  {
+    "id": 27,
+    "title": "Healthcare Intern",
+    "company": "MediCare Pvt Ltd",
+    "location": "Srinagar",
+    "start_date": "2025-10-01",
+    "duration": "2 months",
+    "stipend": "₹4000/month"
+  },
+  {
+    "id": 28,
+    "title": "Civil Engineering Intern",
+    "company": "BuildRight",
+    "location": "Jammu",
+    "start_date": "2025-09-27",
+    "duration": "3 months",
+    "stipend": "₹6000/month"
+  },
+  {
+    "id": 29,
+    "title": "Mechanical Engineering Intern",
+    "company": "AutoWorks",
+    "location": "Baramulla",
+    "start_date": "2025-10-15",
+    "duration": "3 months",
+    "stipend": "₹6500/month"
+  },
+  {
+    "id": 30,
+    "title": "Electrical Engineering Intern",
+    "company": "PowerGrid",
+    "location": "Jammu",
+    "start_date": "2025-09-30",
+    "duration": "3 months",
+    "stipend": "₹7000/month"
+  },
+  {
+    "id": 31,
+    "title": "Chemical Engineering Intern",
+    "company": "ChemLabs",
+    "location": "Srinagar",
+    "start_date": "2025-10-10",
+    "duration": "3 months",
+    "stipend": "₹6000/month"
+  },
+  {
+    "id": 32,
+    "title": "Biotech Intern",
+    "company": "BioGenix",
+    "location": "Pulwama",
+    "start_date": "2025-09-25",
+    "duration": "2 months",
+    "stipend": "₹5000/month"
+  },
+  {
+    "id": 33,
+    "title": "Pharmacy Intern",
+    "company": "HealthPlus Pharma",
+    "location": "Jammu",
+    "start_date": "2025-10-05",
+    "duration": "2 months",
+    "stipend": "₹4500/month"
+  },
+  {
+    "id": 34,
+    "title": "Nursing Intern",
+    "company": "Valley Hospital",
+    "location": "Srinagar",
+    "start_date": "2025-09-18",
+    "duration": "2 months",
+    "stipend": "₹4000/month"
+  },
+  {
+    "id": 35,
+    "title": "Psychology Intern",
+    "company": "MindCare",
+    "location": "Jammu",
+    "start_date": "2025-09-20",
+    "duration": "1 month",
+    "stipend": "₹3000/month"
+  },
+  {
+    "id": 36,
+    "title": "Counseling Intern",
+    "company": "Hope Foundation",
+    "location": "Srinagar",
+    "start_date": "2025-10-01",
+    "duration": "2 months",
+    "stipend": "₹3500/month"
+  },
+  {
+    "id": 37,
+    "title": "NGO Intern",
+    "company": "Green Valley Trust",
+    "location": "Baramulla",
+    "start_date": "2025-09-24",
+    "duration": "1 month",
+    "stipend": "₹3000/month"
+  },
+  {
+    "id": 38,
+    "title": "Tourism Intern",
+    "company": "Explore Kashmir",
+    "location": "Srinagar",
+    "start_date": "2025-10-15",
+    "duration": "3 months",
+    "stipend": "₹5000/month"
+  },
+  {
+    "id": 39,
+    "title": "Hospitality Intern",
+    "company": "Heaven Hotels",
+    "location": "Gulmarg",
+    "start_date": "2025-11-01",
+    "duration": "2 months",
+    "stipend": "₹4500/month"
+  },
+  {
+    "id": 40,
+    "title": "Travel Guide Intern",
+    "company": "JK Adventures",
+    "location": "Pahalgam",
+    "start_date": "2025-09-26",
+    "duration": "1 month",
+    "stipend": "₹3000/month"
+  },
+  {
+    "id": 41,
+    "title": "E-commerce Intern",
+    "company": "ShopNow",
+    "location": "Jammu",
+    "start_date": "2025-09-30",
+    "duration": "3 months",
+    "stipend": "₹6000/month"
+  },
+  {
+    "id": 42,
+    "title": "Logistics Intern",
+    "company": "FastTrack Logistics",
+    "location": "Kathua",
+    "start_date": "2025-10-07",
+    "duration": "2 months",
+    "stipend": "₹5000/month"
+  },
+  {
+    "id": 43,
+    "title": "Supply Chain Intern",
+    "company": "MoveIt",
+    "location": "Jammu",
+    "start_date": "2025-09-22",
+    "duration": "2 months",
+    "stipend": "₹5500/month"
+  },
+  {
+    "id": 44,
+    "title": "IT Support Intern",
+    "company": "TechAssist",
+    "location": "Srinagar",
+    "start_date": "2025-10-02",
+    "duration": "1 month",
+    "stipend": "₹4000/month"
+  },
+  {
+    "id": 45,
+    "title": "Cloud Computing Intern",
+    "company": "CloudNova",
+    "location": "Jammu",
+    "start_date": "2025-09-29",
+    "duration": "3 months",
+    "stipend": "₹7000/month"
+  },
+  {
+    "id": 46,
+    "title": "Blockchain Intern",
+    "company": "ChainTech",
+    "location": "Srinagar",
+    "start_date": "2025-10-12",
+    "duration": "3 months",
+    "stipend": "₹8000/month"
+  },
+  {
+    "id": 47,
+    "title": "Game Development Intern",
+    "company": "PlayWorks",
+    "location": "Jammu",
+    "start_date": "2025-10-05",
+    "duration": "3 months",
+    "stipend": "₹6000/month"
+  },
+  {
+    "id": 48,
+    "title": "Animation Intern",
+    "company": "ToonCraft",
+    "location": "Srinagar",
+    "start_date": "2025-09-27",
+    "duration": "2 months",
+    "stipend": "₹5000/month"
+  },
+  {
+    "id": 49,
+    "title": "Fashion Design Intern",
+    "company": "StyleHub",
+    "location": "Jammu",
+    "start_date": "2025-10-03",
+    "duration": "2 months",
+    "stipend": "₹4500/month"
+  },
+  {
+    "id": 50,
+    "title": "Interior Design Intern",
+    "company": "SpaceMakers",
+    "location": "Srinagar",
+    "start_date": "2025-09-28",
+    "duration": "2 months",
+    "stipend": "₹5000/month"
+  },
+  {
+    "id": 51,
+    "title": "Architecture Intern",
+    "company": "BuildVision",
+    "location": "Jammu",
+    "start_date": "2025-10-08",
+    "duration": "3 months",
+    "stipend": "₹6500/month"
+  },
+  {
+    "id": 52,
+    "title": "Environmental Intern",
+    "company": "EcoFuture",
+    "location": "Srinagar",
+    "start_date": "2025-09-21",
+    "duration": "2 months",
+    "stipend": "₹5000/month"
+  }
+]

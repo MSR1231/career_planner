@@ -1,0 +1,130 @@
+/* -----------------------------------
+   Body & General Styles
+----------------------------------- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* -----------------------------------
+   Navbar Customization
+----------------------------------- */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.navbar-dark.bg-primary {
+  background-color: #0d6efd !important;
+}
+
+/* -----------------------------------
+   Hero Section
+----------------------------------- */
+.hero {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #007bff 0%, #6610f2 100%);
+  color: white;
+}
+
+.hero .display-4 {
+  font-weight: 700;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+.hero .lead {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.25);
+}
+
+.hero .btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.hero .btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+/* -----------------------------------
+   Image Slider Styles
+----------------------------------- */
+.slider {
+  display: inline-block;
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-track img {
+  width: 500px;
+  height: 300px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* -----------------------------------
+   Image Rotation Helpers
+----------------------------------- */
+.rotated-270 {
+  transform: rotate(270deg);
+}
+
+.rotated-90 {
+  transform: rotate(90deg);
+}
+
+.rotating {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* -----------------------------------
+   Footer Styles
+----------------------------------- */
+.footer {
+  background-color: #f1f3f5;
+  color: #555;
+  font-size: 0.9rem;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* -----------------------------------
+   Responsive Adjustments
+----------------------------------- */
+@media (max-width: 576px) {
+  .slider {
+    width: 100%;
+    height: auto;
+  }
+  
+  .slider-track img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .hero .display-4 {
+    font-size: 2rem;
+  }
+}

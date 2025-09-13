@@ -1,0 +1,366 @@
+[
+  {
+    "id": 1,
+    "name": "Post-Matric Scholarship for SC",
+    "eligibility": "SC students after 10th/12th",
+    "amount": "₹8000/year",
+    "deadline": "2025-09-30"
+  },
+  {
+    "id": 2,
+    "name": "Merit Scholarship",
+    "eligibility": "Top 10% students post-12th",
+    "amount": "₹9000/year",
+    "deadline": "2025-10-10"
+  },
+  {
+    "id": 3,
+    "name": "Minority Scholarship Program",
+    "eligibility": "Minority community students",
+    "amount": "₹9500/year",
+    "deadline": "2025-10-20"
+  },
+  {
+    "id": 4,
+    "name": "Post-Matric Scholarship for OBC",
+    "eligibility": "OBC students after 10th/12th",
+    "amount": "₹7000/year",
+    "deadline": "2025-09-28"
+  },
+  {
+    "id": 5,
+    "name": "National Means-cum-Merit Scholarship",
+    "eligibility": "Class 8 students from low-income families",
+    "amount": "₹12,000/year",
+    "deadline": "2025-11-15"
+  },
+  {
+    "id": 6,
+    "name": "Post-Matric Scholarship for ST",
+    "eligibility": "ST students in higher secondary/college",
+    "amount": "₹10,000/year",
+    "deadline": "2025-09-25"
+  },
+  {
+    "id": 7,
+    "name": "Pre-Matric Scholarship for Minorities",
+    "eligibility": "Minority students from Class 1–10",
+    "amount": "₹6000/year",
+    "deadline": "2025-09-20"
+  },
+  {
+    "id": 8,
+    "name": "Pre-Matric Scholarship for SC",
+    "eligibility": "SC students from Class 1–10",
+    "amount": "₹5000/year",
+    "deadline": "2025-09-22"
+  },
+  {
+    "id": 9,
+    "name": "Pre-Matric Scholarship for ST",
+    "eligibility": "ST students from Class 1–10",
+    "amount": "₹5000/year",
+    "deadline": "2025-09-22"
+  },
+  {
+    "id": 10,
+    "name": "Begum Hazrat Mahal Scholarship",
+    "eligibility": "Minority girl students of Class 9–12",
+    "amount": "₹12,000/year",
+    "deadline": "2025-11-01"
+  },
+  {
+    "id": 11,
+    "name": "INSPIRE Scholarship",
+    "eligibility": "Top 1% students in science stream after 12th",
+    "amount": "₹80,000/year",
+    "deadline": "2025-10-30"
+  },
+  {
+    "id": 12,
+    "name": "Pragati Scholarship for Girls",
+    "eligibility": "Girl students pursuing technical education",
+    "amount": "₹50,000/year",
+    "deadline": "2025-10-15"
+  },
+  {
+    "id": 13,
+    "name": "Saksham Scholarship",
+    "eligibility": "Differently-abled students in technical education",
+    "amount": "₹50,000/year",
+    "deadline": "2025-10-15"
+  },
+  {
+    "id": 14,
+    "name": "PG Indira Gandhi Scholarship for Single Girl Child",
+    "eligibility": "Single girl child pursuing PG",
+    "amount": "₹36,200/year",
+    "deadline": "2025-11-05"
+  },
+  {
+    "id": 15,
+    "name": "PG Scholarship for University Rank Holders",
+    "eligibility": "Top 2 rank holders in UG courses",
+    "amount": "₹37,200/year",
+    "deadline": "2025-11-07"
+  },
+  {
+    "id": 16,
+    "name": "AICTE GATE/GPAT Scholarship",
+    "eligibility": "GATE/GPAT qualified PG students",
+    "amount": "₹12,400/month",
+    "deadline": "2025-12-01"
+  },
+  {
+    "id": 17,
+    "name": "Maulana Azad National Fellowship",
+    "eligibility": "Minority students pursuing MPhil/PhD",
+    "amount": "₹31,000–35,000/month",
+    "deadline": "2025-12-15"
+  },
+  {
+    "id": 18,
+    "name": "Rajiv Gandhi National Fellowship",
+    "eligibility": "SC/ST students pursuing higher studies",
+    "amount": "₹31,000–35,000/month",
+    "deadline": "2025-12-20"
+  },
+  {
+    "id": 19,
+    "name": "ICSSR Doctoral Fellowship",
+    "eligibility": "PhD students in social sciences",
+    "amount": "₹20,000/month",
+    "deadline": "2025-12-10"
+  },
+  {
+    "id": 20,
+    "name": "ICHR Junior Research Fellowship",
+    "eligibility": "PhD in history students",
+    "amount": "₹17,600/month",
+    "deadline": "2025-12-05"
+  },
+  {
+    "id": 21,
+    "name": "UGC NET JRF",
+    "eligibility": "Candidates who clear UGC NET",
+    "amount": "₹31,000–35,000/month",
+    "deadline": "2025-12-30"
+  },
+  {
+    "id": 22,
+    "name": "Prime Minister’s Special Scholarship (PMSSS) J&K",
+    "eligibility": "J&K students pursuing UG outside J&K",
+    "amount": "Up to ₹1,25,000/year",
+    "deadline": "2025-09-30"
+  },
+  {
+    "id": 23,
+    "name": "NEC Merit Scholarship",
+    "eligibility": "NE region students for higher studies",
+    "amount": "₹20,000–30,000/year",
+    "deadline": "2025-11-12"
+  },
+  {
+    "id": 24,
+    "name": "KVPY Fellowship",
+    "eligibility": "Class 11–1st year UG science stream",
+    "amount": "₹5000–7000/month",
+    "deadline": "2025-08-31"
+  },
+  {
+    "id": 25,
+    "name": "NTSE Scholarship",
+    "eligibility": "Class 10 students",
+    "amount": "₹1250–2000/month",
+    "deadline": "2025-09-10"
+  },
+  {
+    "id": 26,
+    "name": "Ishan Uday Scholarship for NE & J&K",
+    "eligibility": "NE & J&K students for UG",
+    "amount": "₹5400–7800/month",
+    "deadline": "2025-11-15"
+  },
+  {
+    "id": 27,
+    "name": "ONGC Scholarship",
+    "eligibility": "SC/ST/OBC/General EWS UG/PG students",
+    "amount": "₹48,000/year",
+    "deadline": "2025-11-20"
+  },
+  {
+    "id": 28,
+    "name": "LIC Golden Jubilee Scholarship",
+    "eligibility": "Students from economically weaker sections",
+    "amount": "₹20,000/year",
+    "deadline": "2025-12-15"
+  },
+  {
+    "id": 29,
+    "name": "Tata Scholarship (Cornell University)",
+    "eligibility": "Indian students admitted to Cornell",
+    "amount": "Full tuition & living support",
+    "deadline": "2025-01-10"
+  },
+  {
+    "id": 30,
+    "name": "Fulbright-Nehru Fellowship",
+    "eligibility": "Indian students for US higher studies",
+    "amount": "Full tuition, living, travel",
+    "deadline": "2025-03-31"
+  },
+  {
+    "id": 31,
+    "name": "Chevening Scholarship",
+    "eligibility": "Indian students for UK PG",
+    "amount": "Full tuition & stipend",
+    "deadline": "2025-11-02"
+  },
+  {
+    "id": 32,
+    "name": "Commonwealth Scholarship",
+    "eligibility": "Indian students for UK PG/PhD",
+    "amount": "Full tuition + stipend",
+    "deadline": "2025-12-01"
+  },
+  {
+    "id": 33,
+    "name": "Rhodes Scholarship",
+    "eligibility": "Indian students at Oxford University",
+    "amount": "Full tuition + living expenses",
+    "deadline": "2025-07-31"
+  },
+  {
+    "id": 34,
+    "name": "DAAD Scholarship",
+    "eligibility": "Indian students for German PG/PhD",
+    "amount": "Full tuition + stipend",
+    "deadline": "2025-10-15"
+  },
+  {
+    "id": 35,
+    "name": "Erasmus Mundus Scholarship",
+    "eligibility": "Indian students for European PG",
+    "amount": "Full tuition + stipend",
+    "deadline": "2025-02-28"
+  },
+  {
+    "id": 36,
+    "name": "Japanese Government (MEXT) Scholarship",
+    "eligibility": "Indian students for Japan UG/PG/PhD",
+    "amount": "Full tuition + stipend",
+    "deadline": "2025-05-15"
+  },
+  {
+    "id": 37,
+    "name": "Chinese Government Scholarship",
+    "eligibility": "Indian students for Chinese UG/PG",
+    "amount": "Full tuition + stipend",
+    "deadline": "2025-04-10"
+  },
+  {
+    "id": 38,
+    "name": "Australian Awards Scholarship",
+    "eligibility": "Indian students for Australia PG",
+    "amount": "Full tuition + stipend",
+    "deadline": "2025-04-30"
+  },
+  {
+    "id": 39,
+    "name": "New Zealand Excellence Awards",
+    "eligibility": "Indian UG/PG students",
+    "amount": "NZ$10,000–20,000",
+    "deadline": "2025-06-01"
+  },
+  {
+    "id": 40,
+    "name": "Jammu & Kashmir Post Matric Scholarship",
+    "eligibility": "J&K students in Class 11 to PhD",
+    "amount": "₹10,000–20,000/year",
+    "deadline": "2025-09-25"
+  },
+  {
+    "id": 41,
+    "name": "J&K SC Scholarship Scheme",
+    "eligibility": "SC students of J&K from Class 9 onwards",
+    "amount": "₹7000/year",
+    "deadline": "2025-09-22"
+  },
+  {
+    "id": 42,
+    "name": "J&K ST Scholarship Scheme",
+    "eligibility": "ST students of J&K from Class 9 onwards",
+    "amount": "₹7000/year",
+    "deadline": "2025-09-22"
+  },
+  {
+    "id": 43,
+    "name": "J&K Girls Education Scholarship",
+    "eligibility": "Girl students pursuing higher secondary",
+    "amount": "₹5000/year",
+    "deadline": "2025-09-18"
+  },
+  {
+    "id": 44,
+    "name": "Kashmir University Merit Scholarship",
+    "eligibility": "Meritorious students at University of Kashmir",
+    "amount": "₹12,000/year",
+    "deadline": "2025-10-12"
+  },
+  {
+    "id": 45,
+    "name": "Jammu University Merit Scholarship",
+    "eligibility": "Top UG/PG students at University of Jammu",
+    "amount": "₹12,000/year",
+    "deadline": "2025-10-20"
+  },
+  {
+    "id": 46,
+    "name": "AMU Outreach Scholarship for J&K Students",
+    "eligibility": "J&K students studying at AMU",
+    "amount": "₹15,000/year",
+    "deadline": "2025-09-30"
+  },
+  {
+    "id": 47,
+    "name": "Jamia Millia Islamia Scholarship for J&K",
+    "eligibility": "J&K students admitted in Jamia",
+    "amount": "₹10,000/year",
+    "deadline": "2025-10-05"
+  },
+  {
+    "id": 48,
+    "name": "IGNOU J&K Scholarship",
+    "eligibility": "J&K students in IGNOU courses",
+    "amount": "₹5000/year",
+    "deadline": "2025-11-01"
+  },
+  {
+    "id": 49,
+    "name": "J&K Minority Student Scholarship",
+    "eligibility": "Minority students of J&K pursuing UG/PG",
+    "amount": "₹8000/year",
+    "deadline": "2025-10-15"
+  },
+  {
+    "id": 50,
+    "name": "J&K Orphan Student Scholarship",
+    "eligibility": "Orphan students in schools/colleges",
+    "amount": "₹6000/year",
+    "deadline": "2025-09-28"
+  },
+  {
+    "id": 51,
+    "name": "Women Empowerment Scholarship J&K",
+    "eligibility": "Female UG/PG students of J&K",
+    "amount": "₹10,000/year",
+    "deadline": "2025-10-25"
+  },
+  {
+    "id": 52,
+    "name": "Special Incentive Scholarship for Border Area Students",
+    "eligibility": "Students from border districts of J&K",
+    "amount": "₹7000/year",
+    "deadline": "2025-09-29"
+  }
+]

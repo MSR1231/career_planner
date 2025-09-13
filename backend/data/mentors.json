@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "question": "Which subject do you like most?",
+    "options": ["Science", "Arts", "Commerce", "Vocational"],
+    "answer": ""
+  },
+  {
+    "id": 2,
+    "question": "Are you comfortable with numbers?",
+    "options": ["Yes", "No"],
+    "answer": ""
+  },
+  {
+    "id": 3,
+    "question": "Do you prefer practical or theoretical work?",
+    "options": ["Practical", "Theoretical"],
+    "answer": ""
+  },
+  {
+    "id": 4,
+    "question": "Do you enjoy working with computers and technology?",
+    "options": ["Yes", "No", "Somewhat"],
+    "answer": ""
+  },
+  {
+    "id": 5,
+    "question": "Do you like helping people solve their problems?",
+    "options": ["Yes", "No", "Sometimes"],
+    "answer": ""
+  },
+  {
+    "id": 6,
+    "question": "Do you prefer working alone or in a team?",
+    "options": ["Alone", "Team", "Both"],
+    "answer": ""
+  },
+  {
+    "id": 7,
+    "question": "Which environment excites you more?",
+    "options": ["Office", "Outdoor", "Laboratory", "Classroom"],
+    "answer": ""
+  },
+  {
+    "id": 8,
+    "question": "Do you enjoy reading and writing?",
+    "options": ["Yes", "No", "Sometimes"],
+    "answer": ""
+  },
+  {
+    "id": 9,
+    "question": "Do you like designing or creating new things?",
+    "options": ["Yes", "No", "A little"],
+    "answer": ""
+  },
+  {
+    "id": 10,
+    "question": "Are you interested in managing money and finance?",
+    "options": ["Yes", "No", "Somewhat"],
+    "answer": ""
+  },
+  {
+    "id": 11,
+    "question": "Would you like a job that involves travel?",
+    "options": ["Yes", "No", "Occasionally"],
+    "answer": ""
+  },
+  {
+    "id": 12,
+    "question": "Do you enjoy teaching or explaining things to others?",
+    "options": ["Yes", "No", "Sometimes"],
+    "answer": ""
+  },
+  {
+    "id": 13,
+    "question": "Are you comfortable speaking in public?",
+    "options": ["Yes", "No", "With practice"],
+    "answer": ""
+  },
+  {
+    "id": 14,
+    "question": "Do you prefer working with data or people?",
+    "options": ["Data", "People", "Both"],
+    "answer": ""
+  },
+  {
+    "id": 15,
+    "question": "Do you enjoy solving puzzles or logical problems?",
+    "options": ["Yes", "No", "Sometimes"],
+    "answer": ""
+  },
+  {
+    "id": 16,
+    "question": "Do you want a career with high income or job satisfaction?",
+    "options": ["High Income", "Job Satisfaction", "Both"],
+    "answer": ""
+  },
+  {
+    "id": 17,
+    "question": "Do you prefer stable jobs or taking risks?",
+    "options": ["Stable Jobs", "Taking Risks", "Depends"],
+    "answer": ""
+  },
+  {
+    "id": 18,
+    "question": "Do you like healthcare and helping patients?",
+    "options": ["Yes", "No", "Maybe"],
+    "answer": ""
+  },
+  {
+    "id": 19,
+    "question": "Do you enjoy working with machines and tools?",
+    "options": ["Yes", "No", "Sometimes"],
+    "answer": ""
+  },
+  {
+    "id": 20,
+    "question": "Which type of career appeals to you most?",
+    "options": ["Creative", "Analytical", "Social", "Technical"],
+    "answer": ""
+  }
+]
