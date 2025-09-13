@@ -50,8 +50,8 @@ const HomePage = () => {
         <div className="slider">
           <div className="slider-track" id="sliderTrack">
             <img src="/kashmir-school-7592.avif" alt="Image 1" width="400" height="200" />
-            <img src="/2.jpg" alt="Image 2" width="600" height="200" className="rotated-270" />
-            <img src="/3.avif" alt="Image 3" width="600" height="200" />
+            <img src="/.jpg" alt="Image 2" width="600" height="200" className="rotated-270" />
+            <img src="/.avif" alt="Image 3" width="600" height="200" />
           </div>
         </div>
       </div>
