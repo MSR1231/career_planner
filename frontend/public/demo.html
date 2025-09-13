@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduGuide - Career & Course Advisor</title>
+
+  <!-- Bootstrap 5 CDN -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand" href="#">EduGuide</a>
+
+      <!-- Language Dropdown -->
+      <div class="dropdown">
+        <button
+          class="btn btn-secondary dropdown-toggle"
+          type="button"
+          id="languageDropdown"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Language
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+          <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
+          <li><a class="dropdown-item" href="#" data-lang="hi">Hindi</a></li>
+          <li><a class="dropdown-item" href="#" data-lang="ur">Urdu</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero d-flex align-items-center text-center" style="padding: 60px 0;">
+    <div class="container">
+      <h1 class="display-4" id="hero-title">Career Advisor</h1>
+      <p class="lead mt-3" id="hero-description">Guiding students to the future and motivating them.</p>
+      <div class="mt-4" id="hero-buttons">
+        <a href="#" class="btn btn-lg btn-success me-3" id="btn-quiz">Take Career Quiz</a>
+        <a href="#" class="btn btn-lg btn-success me-3" id="btn-colleges">Find Nearby Colleges</a>
+        <a href="#" class="btn btn-lg btn-success me-3" id="btn-careers">Explore Career Paths</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Spacer -->
+  <div class="my-5"></div>
+
+  <!-- Image Slider Section -->
+  <div style="text-align: center;">
+    <div class="slider" style="
+      display: inline-block;
+      width: 500px;
+      height: 300px;
+      overflow: hidden;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    ">
+      <div class="slider-track" id="sliderTrack" style="
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      ">
+        <img src="kashmir-school-7592.avif" alt="Image 1" width="400" height="200">
+        <img src="2.jpg" alt="Image 2" width="600" height="200" class="rotated-270">
+        <img src="3.avif" alt="Image 2" width="600" height="200">
+        <!-- Add more images here -->
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="footer bg-light text-center py-3 mt-5">
+    <p class="mb-0">&copy; 2025 EduGuide. Empowering Students for Better Futures.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Image Slider JavaScript -->
+  <script>
+    const track = document.getElementById("sliderTrack");
+    const totalImages = track.children.length;
+    const imageWidth = 500; // Must match image width in pixels
+    let index = 0;
+
+    function slide() {
+      index = (index + 1) % totalImages;
+      track.style.transform = `translateX(-${index * imageWidth}px)`;
+    }
+
+    setInterval(slide, 3000); // Auto-slide every 3 seconds
+  </script>
+
+  <!-- Language Selector Script -->
+  <script>
+    const translations = {
+      en: {
+        title: "Career Advisor",
+        description: "Guiding students to the future and motivating them.",
+        btnQuiz: "Take Career Quiz",
+        btnColleges: "Find Nearby Colleges",
+        btnCareers: "Explore Career Paths"
+      },
+      hi: {
+        title: "कैरियर सलाहकार",
+        description: "छात्रों को भविष्य के लिए मार्गदर्शन और प्रेरित करना।",
+        btnQuiz: "कैरियर क्विज़ लें",
+        btnColleges: "नजदीकी कॉलेज खोजें",
+        btnCareers: "कैरियर विकल्प एक्सप्लोर करें"
+      },
+      ur: {
+        title: "کیریئر ایڈوائزر",
+        description: "طلباء کو مستقبل کے لیے رہنمائی اور ترغیب دینا۔",
+        btnQuiz: "کریئر کوئز کریں",
+        btnColleges: "قریبی کالجز تلاش کریں",
+        btnCareers: "کریئر کے راستے دریافت کریں"
+      }
+    };
+
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+      item.addEventListener('click', e => {
+        e.preventDefault();
+        const lang = item.getAttribute('data-lang');
+
+        // Change lang attribute on <html>
+        document.documentElement.lang = lang;
+
+        // Update content based on selected language
+        if (translations[lang]) {
+          document.getElementById('hero-title').textContent = translations[lang].title;
+          document.getElementById('hero-description').textContent = translations[lang].description;
+          document.getElementById('btn-quiz').textContent = translations[lang].btnQuiz;
+          document.getElementById('btn-colleges').textContent = translations[lang].btnColleges;
+          document.getElementById('btn-careers').textContent = translations[lang].btnCareers;
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
