@@ -1,0 +1,86 @@
+[
+    {
+      "id": 1,
+      "question": "Which of the following streams are you most interested in?",
+      "options": [
+        { "text": "Science" },
+        { "text": "Commerce" },
+        { "text": "Arts" },
+        { "text": "Vocational" }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Do you enjoy working with numbers and data?",
+      "options": [
+        { "text": "Yes" },
+        { "text": "No" }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "What kind of projects do you prefer to work on?",
+      "options": [
+        { "text": "Theoretical (research, study-based)" },
+        { "text": "Practical (hands-on, labs)" }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Are you interested in a career related to computer science or technology?",
+      "options": [
+        { "text": "Yes" },
+        { "text": "No" }
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Do you like helping people and solving their problems?",
+      "options": [
+        { "text": "Yes" },
+        { "text": "No" }
+      ]
+    },
+    {
+      "id": 6,
+      "question": "Which subject do you excel at the most?",
+      "options": [
+        { "text": "Mathematics" },
+        { "text": "Languages (English, Hindi, etc.)" },
+        { "text": "Sciences (Physics, Chemistry, Biology)" },
+        { "text": "Social Sciences (History, Geography)" }
+      ]
+    },
+    {
+      "id": 7,
+      "question": "When faced with a challenge, do you prefer to work alone or in a team?",
+      "options": [
+        { "text": "Work alone" },
+        { "text": "Work in a team" }
+      ]
+    },
+    {
+      "id": 8,
+      "question": "Are you a creative person who enjoys arts and design?",
+      "options": [
+        { "text": "Yes" },
+        { "text": "No" }
+      ]
+    },
+    {
+      "id": 9,
+      "question": "Do you enjoy activities that require precision and attention to detail?",
+      "options": [
+        { "text": "Yes" },
+        { "text": "No" }
+      ]
+    },
+    {
+      "id": 10,
+      "question": "Do you have an interest in business, finance, or economics?",
+      "options": [
+        { "text": "Yes" },
+        { "text": "No" }
+      ]
+    }
+]
