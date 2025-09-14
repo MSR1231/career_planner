@@ -3,12 +3,6 @@ import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-ro
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 
-// Import all your existing JSON data
-import collegesData from './data/colleges.json';
-import internshipsData from './data/internships.json';
-import scholarshipsData from './data/scholarships.json';
-import quizData from './data/intermediate.json';
-
 // Import all your existing components
 import HomePage from './components/HomePage';
 import Login from './components/Login';
@@ -23,22 +17,19 @@ import CollegeList from './components/CollegeList';
 import InternshipList from './components/InternshipList';
 import ScholarshipList from './components/ScholarshipList';
 
-// Import NEW ENHANCED components (copy-paste these files to your components folder)
+// Import NEW ENHANCED components
 import VoiceChatbot from './components/VoiceChatbot';
 import StudyMaterials from './components/StudyMaterials';
 import ExamGuides from './components/ExamGuides';
 
 function App() {
-  // Your existing state
+  // State management
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')) || null);
   const [userInterests, setUserInterests] = useState(JSON.parse(localStorage.getItem('userInterests')) || {});
   const [userLocation, setUserLocation] = useState(localStorage.getItem('userLocation') || '');
-
-  // NEW: Enhanced state for new features
   const [showVoiceChat, setShowVoiceChat] = useState(false);
-  const [currentView, setCurrentView] = useState('dashboard');
 
-  // Your existing effects
+  // Persist user data
   useEffect(() => {
     localStorage.setItem('userInterests', JSON.stringify(userInterests));
   }, [userInterests]);
@@ -47,7 +38,7 @@ function App() {
     localStorage.setItem('userLocation', userLocation);
   }, [userLocation]);
 
-  // Your existing handlers with ENHANCEMENTS
+  // Handlers
   const handleLogin = (userData) => {
     setUser(userData);
     localStorage.setItem('user', JSON.stringify(userData));
@@ -60,13 +51,13 @@ function App() {
     localStorage.removeItem('userLocation');
     setUserInterests({});
     setUserLocation('');
-    setShowVoiceChat(false); // Close voice chat on logout
+    setShowVoiceChat(false);
   };
 
   return (
     <Router>
       <div className="App">
-        {/* ENHANCED NAVIGATION with new components */}
+        {/* ENHANCED NAVIGATION */}
         {user && (
           <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
             <div className="container">
@@ -89,7 +80,6 @@ function App() {
                   <li className="nav-item">
                     <Link className="nav-link" to="/career-paths">🎯 Career Paths</Link>
                   </li>
-                  {/* NEW ENHANCED NAVIGATION ITEMS */}
                   <li className="nav-item">
                     <Link className="nav-link" to="/study-materials">📚 Study Materials</Link>
                   </li>
@@ -126,7 +116,7 @@ function App() {
           </nav>
         )}
 
-        {/* ROUTES - Your existing + NEW ENHANCED routes */}
+        {/* ROUTES */}
         <Routes>
           <Route 
             path="/" 
@@ -144,11 +134,23 @@ function App() {
           {/* Protected Routes */}
           <Route 
             path="/dashboard" 
-            element={user ? <Dashboard user={user} /> : <Navigate to="/login" />} 
+            element={user ? (
+              <Dashboard 
+                user={user} 
+                userInterests={userInterests} 
+                userLocation={userLocation} 
+              />
+            ) : <Navigate to="/login" />} 
           />
           <Route 
             path="/quiz" 
-            element={user ? <Quiz user={user} /> : <Navigate to="/login" />} 
+            element={user ? (
+              <Quiz 
+                user={user}
+                userInterests={userInterests}
+                setUserInterests={setUserInterests}
+              />
+            ) : <Navigate to="/login" />} 
           />
           <Route 
             path="/career-paths" 
@@ -164,7 +166,13 @@ function App() {
           />
           <Route 
             path="/colleges" 
-            element={user ? <CollegeList user={user} /> : <Navigate to="/login" />} 
+            element={user ? (
+              <CollegeList 
+                user={user}
+                userInterests={userInterests} 
+                userLocation={userLocation}
+              />
+            ) : <Navigate to="/login" />} 
           />
           <Route 
             path="/internships" 
@@ -186,7 +194,7 @@ function App() {
           />
         </Routes>
 
-        {/* FLOATING VOICE CHAT BUTTON - Always visible when logged in */}
+        {/* FLOATING VOICE CHAT BUTTON */}
         {user && (
           <button 
             className="voice-chat-trigger"
@@ -216,21 +224,21 @@ function App() {
           </button>
         )}
 
-        {/* VOICE CHATBOT COMPONENT - Modal overlay */}
+        {/* VOICE CHATBOT COMPONENT */}
         <VoiceChatbot 
           user={user}
           isOpen={showVoiceChat}
           onClose={() => setShowVoiceChat(false)}
         />
 
-        {/* Your existing chatbot (keeping for compatibility) */}
+        {/* EXISTING CHATBOT */}
         {user && (
           <div className="position-fixed bottom-0 end-0 p-3" style={{ zIndex: 998 }}>
             <Chatbot />
           </div>
         )}
 
-        {/* Add pulse animation for voice button */}
+        {/* ANIMATIONS */}
         <style jsx>{`
           @keyframes pulse {
             0% { transform: scale(1); }
@@ -244,7 +252,6 @@ function App() {
             transition: all 0.3s ease !important;
           }
 
-          /* Mobile responsive voice button */
           @media (max-width: 768px) {
             .voice-chat-trigger {
               bottom: 10px !important;
@@ -254,7 +261,6 @@ function App() {
             }
           }
 
-          /* Enhanced navbar styling */
           .navbar-nav .nav-link {
             border-radius: 8px;
             margin: 0 4px;
@@ -266,7 +272,6 @@ function App() {
             transform: translateY(-1px);
           }
 
-          /* User dropdown styling */
           .dropdown-menu {
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
