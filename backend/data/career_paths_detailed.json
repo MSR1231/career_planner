@@ -1,0 +1,378 @@
+[
+  {
+    "id": 1,
+    "title": "Software Engineering",
+    "category": "Technology",
+    "suitable_after_10th": true,
+    "streams": ["science", "pcm"],
+    "recommended_stream": "Science PCM",
+    "description": "Design, develop, test, and maintain software applications and systems",
+    "detailed_description": "Software engineers are the creative minds behind computer programs and applications. They use programming languages and tools to create everything from mobile apps to complex enterprise software systems.",
+    "requirements": {
+      "education": ["12th with PCM", "B.Tech/B.E. in Computer Science", "Programming skills"],
+      "skills": ["Problem-solving", "Programming languages", "Logical thinking", "Mathematics"],
+      "entrance_exams": ["JEE Main", "JEE Advanced", "State CETs", "University-specific exams"]
+    },
+    "career_path": {
+      "after_10th": "Choose Science PCM → Prepare for JEE → B.Tech CS/IT",
+      "after_12th": "JEE/Other entrance exams → Engineering College → Internships → Job/Higher studies"
+    },
+    "salary_range": {
+      "entry_level": "₹3-8 LPA",
+      "mid_level": "₹8-20 LPA",
+      "senior_level": "₹20-50+ LPA"
+    },
+    "top_colleges": [
+      "IIT Delhi", "IIT Bombay", "IIT Madras", "IIIT Hyderabad", 
+      "NIT Trichy", "BITS Pilani", "VIT Vellore", "SRM Chennai"
+    ],
+    "job_roles": [
+      "Software Developer", "Full Stack Developer", "Backend Engineer",
+      "Frontend Developer", "Mobile App Developer", "DevOps Engineer"
+    ],
+    "growth_potential": "Excellent - High demand, good salaries, remote work opportunities",
+    "industry_outlook": "Growing rapidly with digitalization and AI adoption",
+    "pros": [
+      "High salary potential", "Creative and challenging work", "Remote work opportunities",
+      "Continuous learning", "Global job market", "Entrepreneurship opportunities"
+    ],
+    "cons": [
+      "Need to constantly update skills", "Can be stressful with tight deadlines",
+      "Long hours sometimes", "Competitive field"
+    ],
+    "personalizedInsight": "",
+    "famous_personalities": ["Sundar Pichai", "Satya Nadella", "N.R. Narayana Murthy"]
+  },
+  {
+    "id": 2,
+    "title": "Medical Doctor (MBBS)",
+    "category": "Healthcare",
+    "suitable_after_10th": true,
+    "streams": ["science", "pcb"],
+    "recommended_stream": "Science PCB",
+    "description": "Diagnose, treat, and prevent illnesses and injuries in patients",
+    "detailed_description": "Doctors are healthcare professionals who examine patients, diagnose medical conditions, prescribe treatments, and provide preventive care to maintain public health.",
+    "requirements": {
+      "education": ["12th with PCB", "NEET qualification", "MBBS (5.5 years)", "Internship"],
+      "skills": ["Empathy", "Communication", "Problem-solving", "Attention to detail", "Physical stamina"],
+      "entrance_exams": ["NEET", "AIIMS (now merged with NEET)", "JIPMER (now merged with NEET)"]
+    },
+    "career_path": {
+      "after_10th": "Choose Science PCB → Prepare for NEET → MBBS → Specialization",
+      "after_12th": "NEET → Medical College → MBBS → Internship → Practice/PG → Specialization"
+    },
+    "salary_range": {
+      "entry_level": "₹3-6 LPA (Government)", 
+      "mid_level": "₹8-15 LPA",
+      "senior_level": "₹20-50+ LPA (Private practice/Specialist)"
+    },
+    "top_colleges": [
+      "AIIMS Delhi", "AFMC Pune", "CMC Vellore", "GMCS Srinagar",
+      "KGMU Lucknow", "MAMC Delhi", "JIPMER Puducherry", "SMS Medical Jaipur"
+    ],
+    "job_roles": [
+      "General Physician", "Specialist Doctor", "Surgeon", "Medical Officer",
+      "Research Scientist", "Medical Consultant", "Public Health Officer"
+    ],
+    "growth_potential": "Excellent - Always in demand, can build private practice",
+    "industry_outlook": "Strong growth with aging population and health awareness",
+    "pros": [
+      "Noble profession", "High social respect", "Job security", "Good earning potential",
+      "Personal satisfaction", "Continuous learning", "Can help save lives"
+    ],
+    "cons": [
+      "Long study duration", "High competition in NEET", "Stressful work environment",
+      "Long working hours", "High responsibility", "Expensive education"
+    ],
+    "specializations": [
+      "Cardiology", "Neurology", "Pediatrics", "Gynecology", "Orthopedics",
+      "Dermatology", "Psychiatry", "Radiology", "Anesthesia", "Emergency Medicine"
+    ],
+    "famous_personalities": ["Dr. APJ Abdul Kalam", "Dr. Devi Shetty", "Dr. Naresh Trehan"]
+  },
+  {
+    "id": 3,
+    "title": "Civil Services (IAS/IPS/IFS)",
+    "category": "Government",
+    "suitable_after_10th": true,
+    "streams": ["all"],
+    "recommended_stream": "Any stream (Arts preferred by many)",
+    "description": "Administrative and leadership roles in government serving the nation",
+    "detailed_description": "Civil servants are the backbone of government administration, responsible for policy implementation, public welfare, and maintaining law and order in the country.",
+    "requirements": {
+      "education": ["Any bachelor's degree", "Age: 21-32 years", "UPSC CSE qualification"],
+      "skills": ["Leadership", "Communication", "Decision-making", "Integrity", "General awareness"],
+      "entrance_exams": ["UPSC Civil Services Examination"]
+    },
+    "career_path": {
+      "after_10th": "Any stream → Graduation → UPSC preparation → Civil Services",
+      "after_12th": "Any degree → UPSC CSE → Training → Posting as officer"
+    },
+    "salary_range": {
+      "entry_level": "₹56,100 (7th Pay Commission)",
+      "mid_level": "₹78,800-₹1,18,500",
+      "senior_level": "₹2,25,000+ (Secretary level)"
+    },
+    "services": [
+      "IAS - Indian Administrative Service",
+      "IPS - Indian Police Service", 
+      "IFS - Indian Foreign Service",
+      "IRS - Indian Revenue Service",
+      "IES - Indian Engineering Services"
+    ],
+    "job_roles": [
+      "District Collector", "SP/DGP", "Ambassador", "Secretary",
+      "Commissioner", "Joint Secretary", "Additional Secretary"
+    ],
+    "growth_potential": "Excellent - Opportunity to serve nation, influence policy",
+    "industry_outlook": "Always in demand, prestigious career with job security",
+    "pros": [
+      "Job security", "High social status", "Power to make difference",
+      "Good salary and perks", "Respect in society", "Opportunity to serve nation"
+    ],
+    "cons": [
+      "Highly competitive", "Political interference", "Transfers frequently",
+      "High responsibility and stress", "Long preparation required"
+    ],
+    "preparation_subjects": [
+      "History", "Geography", "Polity", "Economics", "Environment",
+      "Current Affairs", "Ethics", "Optional Subject"
+    ],
+    "famous_personalities": ["Lal Bahadur Shastri", "Sardar Patel", "Dr. Kiran Bedi"]
+  },
+  {
+    "id": 4,
+    "title": "Chartered Accountancy (CA)",
+    "category": "Finance",
+    "suitable_after_10th": false,
+    "streams": ["commerce", "all"],
+    "recommended_stream": "Commerce",
+    "description": "Financial expertise in accounting, auditing, taxation, and business advisory",
+    "detailed_description": "Chartered Accountants are financial experts who help businesses and individuals with accounting, auditing, taxation, and financial planning services.",
+    "requirements": {
+      "education": ["12th pass", "CA Foundation", "CA Intermediate", "CA Final", "3 years articleship"],
+      "skills": ["Analytical thinking", "Attention to detail", "Mathematical skills", "Ethics"],
+      "entrance_exams": ["CA Foundation", "CA Intermediate", "CA Final"]
+    },
+    "career_path": {
+      "after_10th": "Commerce stream → CA Foundation after 12th → CA Intermediate → CA Final",
+      "after_12th": "CA Foundation → CA Intermediate → Articleship → CA Final → Practice"
+    },
+    "salary_range": {
+      "entry_level": "₹4-8 LPA",
+      "mid_level": "₹10-25 LPA", 
+      "senior_level": "₹25-100+ LPA (Own practice)"
+    },
+    "top_firms": [
+      "Deloitte", "PwC", "EY", "KPMG", "Grant Thornton",
+      "BDO", "RSM", "Local CA firms"
+    ],
+    "job_roles": [
+      "Auditor", "Tax Consultant", "Financial Advisor", "CFO",
+      "Investment Analyst", "Forensic Accountant", "Own CA Practice"
+    ],
+    "growth_potential": "Excellent - Can start own practice, high earning potential",
+    "industry_outlook": "Strong demand with growing economy and regulatory requirements",
+    "pros": [
+      "High earning potential", "Respect in business community", "Own practice opportunity",
+      "Diverse career options", "Job security", "Continuous learning"
+    ],
+    "cons": [
+      "Long course duration", "Difficult examinations", "High competition",
+      "Need to stay updated with laws", "Responsibility and liability"
+    ],
+    "specializations": [
+      "Corporate Finance", "Taxation", "Audit", "Forensic Accounting",
+      "Investment Banking", "Management Consulting"
+    ],
+    "famous_personalities": ["Kumar Mangalam Birla", "Deepak Parekh", "Y.H. Malegam"]
+  },
+  {
+    "id": 5,
+    "title": "Fashion Designing",
+    "category": "Creative Arts",
+    "suitable_after_10th": true,
+    "streams": ["all"],
+    "recommended_stream": "Arts (but all streams can apply)",
+    "description": "Create original designs for clothing, accessories, and fashion products",
+    "detailed_description": "Fashion designers create original clothing, accessories, and footwear. They sketch designs, select fabrics and patterns, and give instructions on how to make the products.",
+    "requirements": {
+      "education": ["12th any stream", "Fashion Design Diploma/Degree", "Portfolio development"],
+      "skills": ["Creativity", "Drawing skills", "Color sense", "Trend awareness", "Business acumen"],
+      "entrance_exams": ["NIFT Entrance", "NID DAT", "UCEED", "CEED"]
+    },
+    "career_path": {
+      "after_10th": "Any stream → Fashion Design course → Internship → Designer role",
+      "after_12th": "Fashion Design degree → Portfolio → Fashion industry → Own brand"
+    },
+    "salary_range": {
+      "entry_level": "₹2-5 LPA",
+      "mid_level": "₹5-15 LPA",
+      "senior_level": "₹15-50+ LPA (Successful designers)"
+    },
+    "top_colleges": [
+      "NIFT Delhi", "NID Ahmedabad", "Pearl Academy", "MIT Institute of Design",
+      "SOFT Pune", "JD Institute", "IEC Delhi"
+    ],
+    "job_roles": [
+      "Fashion Designer", "Textile Designer", "Fashion Stylist", "Fashion Illustrator",
+      "Merchandiser", "Fashion Buyer", "Fashion Entrepreneur"
+    ],
+    "growth_potential": "Good - Can build own brand, work with celebrities",
+    "industry_outlook": "Growing with e-commerce and fashion consciousness",
+    "pros": [
+      "Creative work", "Own brand opportunity", "Work with celebrities",
+      "Travel opportunities", "Flexibility", "Express creativity"
+    ],
+    "cons": [
+      "Irregular income initially", "High competition", "Need to stay trendy",
+      "Seasonal business", "Requires investment", "Unpredictable market"
+    ],
+    "specializations": [
+      "Apparel Design", "Textile Design", "Accessory Design", "Footwear Design",
+      "Costume Design", "Fashion Styling"
+    ],
+    "famous_personalities": ["Manish Malhotra", "Sabyasachi", "Ritu Kumar", "Rohit Bal"]
+  },
+  {
+    "id": 6,
+    "title": "Architecture",
+    "category": "Design & Engineering",
+    "suitable_after_10th": true,
+    "streams": ["science", "pcm"],
+    "recommended_stream": "Science PCM (Mathematics mandatory)",
+    "description": "Design and plan buildings, structures, and urban spaces",
+    "detailed_description": "Architects design buildings and structures, combining artistic vision with technical knowledge to create functional and aesthetically pleasing spaces.",
+    "requirements": {
+      "education": ["12th with PCM", "B.Arch (5 years)", "Drawing skills", "NATA qualification"],
+      "skills": ["Creativity", "Spatial visualization", "Drawing", "Mathematics", "Technology"],
+      "entrance_exams": ["NATA", "JEE Main Paper 2", "State-level architecture exams"]
+    },
+    "career_path": {
+      "after_10th": "Science PCM → NATA/JEE preparation → B.Arch → Practice",
+      "after_12th": "NATA → Architecture college → Internship → Architecture practice"
+    },
+    "salary_range": {
+      "entry_level": "₹2.5-5 LPA",
+      "mid_level": "₹5-15 LPA",
+      "senior_level": "₹15-50+ LPA (Established architects)"
+    },
+    "top_colleges": [
+      "IIT Kharagpur", "IIT Roorkee", "NIT Trichy", "SPA Delhi",
+      "CEPT Ahmedabad", "Jamia Millia Islamia", "Sir JJ College Mumbai"
+    ],
+    "job_roles": [
+      "Architect", "Urban Planner", "Landscape Architect", "Interior Designer",
+      "Project Manager", "Design Consultant", "Government Town Planner"
+    ],
+    "growth_potential": "Good - Can start own firm, work on prestigious projects",
+    "industry_outlook": "Growing with urbanization and infrastructure development",
+    "pros": [
+      "Creative and technical work", "Prestigious profession", "Own firm opportunity",
+      "Diverse projects", "Good earning potential", "Social impact"
+    ],
+    "cons": [
+      "Long project cycles", "Liability issues", "Need continuous learning",
+      "Competition from engineers", "Economic sensitivity"
+    ],
+    "specializations": [
+      "Residential Architecture", "Commercial Architecture", "Urban Planning",
+      "Landscape Architecture", "Interior Design", "Sustainable Design"
+    ],
+    "famous_personalities": ["Charles Correa", "B.V. Doshi", "Raj Rewal", "Hafeez Contractor"]
+  },
+  {
+    "id": 7,
+    "title": "Data Science",
+    "category": "Technology & Analytics",
+    "suitable_after_10th": true,
+    "streams": ["science", "pcm"],
+    "recommended_stream": "Science PCM (Statistics/Computer Science preferred)",
+    "description": "Extract insights from data using statistics, programming, and machine learning",
+    "detailed_description": "Data scientists analyze large amounts of data to find patterns, build predictive models, and help businesses make data-driven decisions.",
+    "requirements": {
+      "education": ["12th with Maths", "B.Tech/B.Sc in CS/Stats/Maths", "Programming skills", "Statistics knowledge"],
+      "skills": ["Programming (Python/R)", "Statistics", "Machine Learning", "SQL", "Data visualization"],
+      "entrance_exams": ["JEE Main", "University entrance exams", "Specialized Data Science courses"]
+    },
+    "career_path": {
+      "after_10th": "Science PCM → B.Tech/B.Sc → Data Science specialization → Industry",
+      "after_12th": "Engineering/Science degree → Data Science courses/Masters → Data Scientist"
+    },
+    "salary_range": {
+      "entry_level": "₹4-8 LPA",
+      "mid_level": "₹8-20 LPA",
+      "senior_level": "₹20-50+ LPA"
+    },
+    "top_colleges": [
+      "IIT Delhi", "IIT Bombay", "ISI Kolkata", "IIM Bangalore",
+      "BITS Pilani", "VIT Vellore", "Manipal Institute"
+    ],
+    "job_roles": [
+      "Data Scientist", "Data Analyst", "Machine Learning Engineer", "Business Analyst",
+      "Research Scientist", "AI Engineer", "Data Consultant"
+    ],
+    "growth_potential": "Excellent - High demand across industries",
+    "industry_outlook": "Rapidly growing with AI and digital transformation",
+    "pros": [
+      "High demand field", "Excellent salaries", "Work with cutting-edge technology",
+      "Remote work opportunities", "Diverse applications", "Continuous learning"
+    ],
+    "cons": [
+      "Need strong technical skills", "Constantly evolving field", "High competition",
+      "Need continuous upskilling", "Can be complex work"
+    ],
+    "specializations": [
+      "Machine Learning", "Deep Learning", "Business Analytics", "Big Data",
+      "Artificial Intelligence", "Predictive Analytics"
+    ],
+    "famous_personalities": ["Andrew Ng", "Geoffrey Hinton", "Fei-Fei Li"]
+  },
+  {
+    "id": 8,
+    "title": "Digital Marketing",
+    "category": "Marketing & Communication",
+    "suitable_after_10th": true,
+    "streams": ["all"],
+    "recommended_stream": "Any stream (Commerce/Arts preferred)",
+    "description": "Promote products and services using digital channels and technologies",
+    "detailed_description": "Digital marketers use online platforms, social media, email, and other digital channels to reach customers, build brand awareness, and drive sales.",
+    "requirements": {
+      "education": ["12th any stream", "Digital Marketing certification", "Bachelor's degree preferred"],
+      "skills": ["Creativity", "Analytical thinking", "Communication", "Tech-savvy", "Adaptability"],
+      "entrance_exams": ["No specific entrance exam", "Various certification courses"]
+    },
+    "career_path": {
+      "after_10th": "Any stream → Digital Marketing course → Internship → Marketing role",
+      "after_12th": "Degree + Digital Marketing certification → Agency/Company → Specialist"
+    },
+    "salary_range": {
+      "entry_level": "₹2-4 LPA",
+      "mid_level": "₹4-10 LPA",
+      "senior_level": "₹10-25+ LPA"
+    },
+    "top_courses": [
+      "Google Digital Marketing", "Facebook Blueprint", "HubSpot Academy",
+      "Digital Vidya", "NIIT Digital Marketing", "Simplilearn"
+    ],
+    "job_roles": [
+      "Digital Marketing Executive", "SEO Specialist", "Social Media Manager", 
+      "Content Marketing Manager", "PPC Specialist", "Email Marketing Specialist"
+    ],
+    "growth_potential": "Excellent - Growing rapidly with digital adoption",
+    "industry_outlook": "Strong growth with increasing online business",
+    "pros": [
+      "Growing field", "Creative work", "Good career growth", "Remote work possible",
+      "Low entry barriers", "Diverse opportunities", "Entrepreneurship potential"
+    ],
+    "cons": [
+      "Rapidly changing field", "Need continuous learning", "Performance pressure",
+      "Can be stressful", "Results-driven environment"
+    ],
+    "specializations": [
+      "SEO/SEM", "Social Media Marketing", "Content Marketing", "Email Marketing",
+      "Affiliate Marketing", "Influencer Marketing", "E-commerce Marketing"
+    ],
+    "famous_personalities": ["Gary Vaynerchuk", "Neil Patel", "Seth Godin"]
+  }
+]

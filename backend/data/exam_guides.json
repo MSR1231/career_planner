@@ -1,0 +1,355 @@
+[
+  {
+    "id": 1,
+    "exam_name": "JEE Main",
+    "full_form": "Joint Entrance Examination - Main",
+    "applicable_classes": ["11", "12", "pass"],
+    "streams": ["science", "pcm"],
+    "description": "National level entrance exam for admission to NITs, IIITs, and other engineering colleges",
+    "eligibility": {
+      "age_limit": "No upper age limit",
+      "qualification": "12th pass with Physics, Chemistry, Mathematics",
+      "minimum_percentage": "75% in 12th (65% for SC/ST)"
+    },
+    "exam_pattern": {
+      "mode": "Computer Based Test (CBT)",
+      "duration": "3 hours",
+      "subjects": ["Physics", "Chemistry", "Mathematics"],
+      "total_questions": 75,
+      "marking_scheme": "+4 for correct, -1 for incorrect"
+    },
+    "exam_dates": {
+      "application_start": "December 2024",
+      "application_end": "January 2025",
+      "exam_dates": "January & April 2025",
+      "result_date": "February & May 2025"
+    },
+    "preparation_tips": [
+      "Focus on NCERT textbooks first",
+      "Practice previous year papers",
+      "Take regular mock tests",
+      "Maintain consistency in study schedule",
+      "Focus on Physics and Mathematics for better scores"
+    ],
+    "career_prospects": [
+      "B.Tech in various engineering disciplines",
+      "Admission to NITs, IIITs, GFTIs",
+      "Gateway to JEE Advanced for IIT admission",
+      "Career in engineering, technology, research"
+    ],
+    "application_fee": 650,
+    "official_website": "https://jeemain.nta.nic.in",
+    "difficulty_level": "Moderate to High",
+    "competition_level": "Very High - 12+ lakh candidates",
+    "study_duration": "2 years (Class 11-12)"
+  },
+  {
+    "id": 2,
+    "exam_name": "NEET",
+    "full_form": "National Eligibility cum Entrance Test",
+    "applicable_classes": ["12", "pass"],
+    "streams": ["science", "pcb"],
+    "description": "Single entrance examination for medical and dental courses in India",
+    "eligibility": {
+      "age_limit": "17-25 years (30 for SC/ST/OBC)",
+      "qualification": "12th pass with Physics, Chemistry, Biology",
+      "minimum_percentage": "50% in 12th (40% for SC/ST/OBC)"
+    },
+    "exam_pattern": {
+      "mode": "Pen and Paper (Offline)",
+      "duration": "3 hours 20 minutes",
+      "subjects": ["Physics", "Chemistry", "Biology"],
+      "total_questions": 180,
+      "marking_scheme": "+4 for correct, -1 for incorrect"
+    },
+    "exam_dates": {
+      "application_start": "February 2025",
+      "application_end": "March 2025",
+      "exam_dates": "May 2025",
+      "result_date": "June 2025"
+    },
+    "preparation_tips": [
+      "Master NCERT thoroughly, especially Biology",
+      "Focus on diagrams and biological processes",
+      "Practice numerical problems in Physics and Chemistry",
+      "Take sectional and full-length tests",
+      "Maintain accuracy over speed"
+    ],
+    "career_prospects": [
+      "MBBS - Bachelor of Medicine and Bachelor of Surgery",
+      "BDS - Bachelor of Dental Surgery",
+      "BAMS, BHMS, BUMS - Alternative Medicine",
+      "Career as Doctor, Surgeon, Medical Researcher"
+    ],
+    "application_fee": 1600,
+    "official_website": "https://neet.nta.nic.in",
+    "difficulty_level": "High",
+    "competition_level": "Extremely High - 18+ lakh candidates",
+    "study_duration": "2 years (Class 11-12)"
+  },
+  {
+    "id": 3,
+    "exam_name": "UPSC CSE",
+    "full_form": "Union Public Service Commission Civil Services Examination",
+    "applicable_classes": ["graduation"],
+    "streams": ["all"],
+    "description": "Premier examination for recruitment to various Civil Services of India",
+    "eligibility": {
+      "age_limit": "21-32 years (relaxation for reserved categories)",
+      "qualification": "Bachelor's degree from recognized university",
+      "minimum_percentage": "No minimum percentage required"
+    },
+    "exam_pattern": {
+      "mode": "Offline (Prelims & Mains) + Interview",
+      "stages": "Prelims, Mains, Interview",
+      "prelims": "2 papers (GS + CSAT)",
+      "mains": "9 papers (Essay, GS, Optional, Language)",
+      "interview": "Personality Test"
+    },
+    "exam_dates": {
+      "notification": "February 2025",
+      "application_end": "March 2025",
+      "prelims": "June 2025",
+      "mains": "September 2025",
+      "interview": "February-April 2026"
+    },
+    "preparation_tips": [
+      "Read newspapers daily (The Hindu, Indian Express)",
+      "Cover NCERT books (6th-12th)",
+      "Choose optional subject wisely",
+      "Practice answer writing for Mains",
+      "Stay updated with current affairs"
+    ],
+    "career_prospects": [
+      "IAS - District Collector, Secretary, Commissioner",
+      "IPS - Police Officer, SP, DGP",
+      "IFS - Foreign Service Officer",
+      "IRS - Income Tax, Customs Officer",
+      "Central Group A services"
+    ],
+    "application_fee": 100,
+    "official_website": "https://www.upsc.gov.in",
+    "difficulty_level": "Very High",
+    "competition_level": "Extremely High - 10+ lakh candidates",
+    "study_duration": "1-2 years post graduation"
+  },
+  {
+    "id": 4,
+    "exam_name": "CLAT",
+    "full_form": "Common Law Admission Test",
+    "applicable_classes": ["12", "pass"],
+    "streams": ["all"],
+    "description": "National level entrance exam for admission to National Law Universities",
+    "eligibility": {
+      "age_limit": "No upper age limit",
+      "qualification": "12th pass from recognized board",
+      "minimum_percentage": "45% in 12th (40% for SC/ST)"
+    },
+    "exam_pattern": {
+      "mode": "Computer Based Test (CBT)",
+      "duration": "2 hours",
+      "subjects": ["English", "Current Affairs", "Legal Reasoning", "Logical Reasoning", "Quantitative Techniques"],
+      "total_questions": 120,
+      "marking_scheme": "+1 for correct, -0.25 for incorrect"
+    },
+    "exam_dates": {
+      "application_start": "January 2025",
+      "application_end": "March 2025",
+      "exam_dates": "May 2025",
+      "result_date": "June 2025"
+    },
+    "preparation_tips": [
+      "Read quality newspapers and magazines",
+      "Practice legal reasoning questions",
+      "Improve reading comprehension speed",
+      "Stay updated with current affairs",
+      "Take regular mock tests"
+    ],
+    "career_prospects": [
+      "5-year integrated BA LLB/B.Com LLB",
+      "Career as Advocate, Judge, Legal Advisor",
+      "Corporate Law, Criminal Law, Civil Law",
+      "Legal Consultant, Law Firm Partner"
+    ],
+    "application_fee": 4000,
+    "official_website": "https://consortiumofnlus.ac.in",
+    "difficulty_level": "Moderate",
+    "competition_level": "High - 60,000+ candidates",
+    "study_duration": "6 months to 1 year"
+  },
+  {
+    "id": 5,
+    "exam_name": "CA Foundation",
+    "full_form": "Chartered Accountancy Foundation",
+    "applicable_classes": ["12", "appearing"],
+    "streams": ["commerce", "all"],
+    "description": "Entry level examination for CA course conducted by ICAI",
+    "eligibility": {
+      "age_limit": "No age limit",
+      "qualification": "12th pass or appearing",
+      "minimum_percentage": "No minimum percentage"
+    },
+    "exam_pattern": {
+      "mode": "Computer Based Test (CBT)",
+      "duration": "6 hours (4 papers)",
+      "subjects": ["Accounts", "Law", "Mathematics & Statistics", "Economics"],
+      "total_marks": 400,
+      "passing_marks": "40% in each paper, 50% aggregate"
+    },
+    "exam_dates": {
+      "registration": "Ongoing",
+      "exam_dates": "May & November (twice a year)",
+      "result_date": "Within 6-8 weeks of exam"
+    },
+    "preparation_tips": [
+      "Clear concepts from ICAI study materials",
+      "Practice numerical problems regularly",
+      "Focus on practical application",
+      "Take revision tests",
+      "Join test series for better preparation"
+    ],
+    "career_prospects": [
+      "Chartered Accountant profession",
+      "Audit, Taxation, Financial Advisory",
+      "Corporate Finance, Investment Banking",
+      "Own practice or employment in firms"
+    ],
+    "application_fee": 1200,
+    "official_website": "https://www.icai.org",
+    "difficulty_level": "Moderate",
+    "competition_level": "Moderate - Pass percentage around 30%",
+    "study_duration": "4-6 months"
+  },
+  {
+    "id": 6,
+    "exam_name": "NDA",
+    "full_form": "National Defence Academy",
+    "applicable_classes": ["12", "appearing"],
+    "streams": ["pcm"],
+    "description": "Joint entrance examination for Army, Navy and Air Force wings of NDA",
+    "eligibility": {
+      "age_limit": "16.5-19.5 years",
+      "qualification": "12th pass with PCM (for Air Force & Navy), any stream (for Army)",
+      "gender": "Only for male candidates",
+      "marital_status": "Unmarried"
+    },
+    "exam_pattern": {
+      "mode": "Offline (OMR based)",
+      "duration": "5 hours (2 papers)",
+      "subjects": ["Mathematics", "General Ability Test"],
+      "total_marks": 900,
+      "selection": "Written + SSB Interview + Medical"
+    },
+    "exam_dates": {
+      "notification": "December 2024 & June 2025",
+      "application_end": "January 2025 & July 2025",
+      "exam_dates": "April 2025 & September 2025",
+      "result_date": "Within 6 weeks"
+    },
+    "preparation_tips": [
+      "Strong foundation in Mathematics",
+      "Focus on speed and accuracy",
+      "Practice previous year papers",
+      "Improve general knowledge",
+      "Physical fitness is important"
+    ],
+    "career_prospects": [
+      "Officer in Indian Army, Navy, Air Force",
+      "Leadership positions in defense services",
+      "Technical and administrative roles",
+      "Opportunity to serve the nation"
+    ],
+    "application_fee": 100,
+    "official_website": "https://www.upsc.gov.in",
+    "difficulty_level": "Moderate",
+    "competition_level": "High - Highly competitive selection",
+    "study_duration": "6 months to 1 year"
+  },
+  {
+    "id": 7,
+    "exam_name": "BBA Entrance Exams",
+    "full_form": "Bachelor of Business Administration Entrance",
+    "applicable_classes": ["12", "pass"],
+    "streams": ["all"],
+    "description": "Various entrance exams for admission to BBA programs in top colleges",
+    "eligibility": {
+      "age_limit": "Usually 17-22 years",
+      "qualification": "12th pass from recognized board",
+      "minimum_percentage": "50-60% in 12th (varies by college)"
+    },
+    "exam_pattern": {
+      "mode": "Online/Offline (varies by exam)",
+      "duration": "2-3 hours",
+      "subjects": ["English", "Logical Reasoning", "General Knowledge", "Quantitative Aptitude"],
+      "format": "Multiple choice questions"
+    },
+    "major_exams": [
+      "IPU CET BBA",
+      "SET (Symbiosis)",
+      "NPAT (NMIMS)",
+      "UGAT (Christ University)",
+      "DU JAT"
+    ],
+    "preparation_tips": [
+      "Improve English language skills",
+      "Practice quantitative aptitude",
+      "Stay updated with current affairs",
+      "Develop logical reasoning ability",
+      "Take mock tests regularly"
+    ],
+    "career_prospects": [
+      "Management roles in various industries",
+      "Marketing, Finance, HR specializations",
+      "Entrepreneurship opportunities",
+      "Gateway to MBA programs"
+    ],
+    "application_fee": 1000-2500,
+    "difficulty_level": "Moderate",
+    "competition_level": "Moderate to High",
+    "study_duration": "3-4 months"
+  },
+  {
+    "id": 8,
+    "exam_name": "State Engineering Entrance Exams",
+    "full_form": "State Level Engineering Entrance Examinations",
+    "applicable_classes": ["12", "pass"],
+    "streams": ["science", "pcm"],
+    "description": "State-specific entrance exams for engineering admissions",
+    "eligibility": {
+      "age_limit": "Usually no upper age limit",
+      "qualification": "12th pass with PCM",
+      "minimum_percentage": "45-50% in 12th"
+    },
+    "major_exams": [
+      "MHT CET (Maharashtra)",
+      "KCET (Karnataka)",
+      "EAMCET (Telangana/Andhra Pradesh)",
+      "WBJEE (West Bengal)",
+      "OJEE (Odisha)",
+      "GUJCET (Gujarat)"
+    ],
+    "exam_pattern": {
+      "mode": "Online/Offline (state-specific)",
+      "duration": "2.5-3 hours",
+      "subjects": ["Physics", "Chemistry", "Mathematics"],
+      "marking_scheme": "Varies by state"
+    },
+    "preparation_tips": [
+      "Focus on state board syllabus",
+      "Practice state-specific previous papers",
+      "Master basic concepts thoroughly",
+      "Time management is crucial",
+      "Know the exam pattern well"
+    ],
+    "career_prospects": [
+      "B.Tech in state government colleges",
+      "Lower fees compared to private colleges",
+      "Good placement opportunities",
+      "Various engineering specializations"
+    ],
+    "application_fee": 500-1500,
+    "difficulty_level": "Moderate",
+    "competition_level": "High at state level",
+    "study_duration": "1-2 years"
+  }
+]
