@@ -1,22 +1,21 @@
-import React from "react";
+import React from 'react';
 
-function Leaderboard() {
-  // Example static leaderboard data. Replace with dynamic state for real demo.
-  const leaders = [
-    { username: "rahul123", score: 94 },
-    { username: "ayesha456", score: 92 },
-    { username: "imran789", score: 89 },
-    { username: "priya999", score: 87 }
-  ];
+function Leaderboard({ users }) {
+  if (!users || users.length === 0) return <p>No leaderboard data.</p>;
+
   return (
-    <div>
-      <h3>Quiz Leaderboard</h3>
-      <ol>
-        {leaders.map((l, i) => (
-          <li key={i}><b>{l.username}</b>: {l.score} pts</li>
+    <div className="container py-5">
+      <h3>Top Scorers & Achievers</h3>
+      <ol className="list-group list-group-numbered">
+        {users.map((user, idx) => (
+          <li key={idx} className="list-group-item d-flex justify-content-between align-items-center">
+            {user.name} 
+            <span className="badge bg-primary rounded-pill">{user.score}</span>
+          </li>
         ))}
       </ol>
     </div>
   );
 }
+
 export default Leaderboard;

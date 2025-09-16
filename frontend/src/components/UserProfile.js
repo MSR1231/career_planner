@@ -1,18 +1,18 @@
-import React from "react";
+import React from 'react';
+
 function UserProfile({ user }) {
-  if (!user) return null;
+  if (!user) return <p>No user data available.</p>;
   return (
-    <div style={{
-      background: "#fff",
-      borderRadius: 10,
-      padding: 20,
-      margin: 15,
-      boxShadow: "0 2px 8px #888"
-    }}>
+    <div className="container py-5">
       <h3>Your Profile</h3>
-      <p><b>Username:</b> {user.username}</p>
-      <p><b>Email:</b> {user.email}</p>
+      <ul className="list-group">
+        <li className="list-group-item"><strong>Full Name: </strong>{user.fullName}</li>
+        <li className="list-group-item"><strong>Email: </strong>{user.email}</li>
+        <li className="list-group-item"><strong>Class: </strong>{user.currentClass}</li>
+        <li className="list-group-item"><strong>Age: </strong>{user.age}</li>
+      </ul>
     </div>
   );
 }
+
 export default UserProfile;

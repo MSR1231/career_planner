@@ -1,25 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
-function Mentors() {
-  const [mentors, setMentors] = useState([]);
-
-  useEffect(() => {
-    fetch('/api/mentors')
-      .then(res => res.json())
-      .then(setMentors)
-      .catch(() => setMentors([]));
-  }, []);
-
+function Mentors({ mentors }) {
   return (
-    <div style={{padding:20}}>
-      <h3>Mentors</h3>
-      <ul>
-        {mentors.map((m, i) => (
-          <li key={i}>
-            <strong>{m.name}</strong> - Language: {m.language || 'N/A'}, Expertise: {m.expertise || 'N/A'}
-          </li>
-        ))}
-      </ul>
+    <div className="container py-5">
+      <h2>Find Mentors</h2>
+      {mentors.length === 0 ? (
+        <p>No mentors available currently.</p>
+      ) : (
+        mentors.map(m => (
+          <div key={m.id} className="card mb-3 shadow">
+            <div className="card-body">
+              <h5>{m.name}</h5>
+              <p><strong>Field:</strong> {m.field}</p>
+              <p><strong>Location:</strong> {m.location}</p>
+              <p><strong>Contact:</strong> {m.contact || 'Not available'}</p>
+            </div>
+          </div>
+        ))
+      )}
     </div>
   );
 }

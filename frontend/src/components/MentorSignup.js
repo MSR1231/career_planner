@@ -1,29 +1,34 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+
 function MentorSignup() {
-  const [name, setName] = useState(""); const [college, setCollege] = useState(""); const [expertise, setExpertise] = useState(""); const [contact, setContact] = useState(""); const [msg, setMsg] = useState("");
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const data = { name, college, expertise, contact };
-    const res = await fetch("http://localhost:5000/api/mentorsignup", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data)
-    });
-    const result = await res.json();
-    if (result.success) { setMsg("Mentor signup successful!"); setName(""); setCollege(""); setExpertise(""); setContact(""); } else { setMsg("Signup failed. Try again."); }
+  const [form, setForm] = useState({ name: '', email: '', field: '', location: '', contact: '' });
+  const [message, setMessage] = useState('');
+
+  const handleChange = e => {
+    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    // Normally send to backend here; for now just show success message.
+    setMessage('Thanks for signing up as a mentor! We will get back to you soon.');
+  };
+
   return (
-    <div style={{background:"#fff",margin:"18px auto",maxWidth:420,padding:"22px",borderRadius:"10px",boxShadow:"0 2px 8px #bbb"}}>
-      <h3>Mentor Signup</h3>
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Name" value={name} onChange={e => setName(e.target.value)} required />
-        <input type="text" placeholder="College" value={college} onChange={e => setCollege(e.target.value)} required />
-        <input type="text" placeholder="Expertise (e.g. UPSC, IT, Business)" value={expertise} onChange={e => setExpertise(e.target.value)} required />
-        <input type="email" placeholder="Contact Email" value={contact} onChange={e => setContact(e.target.value)} required />
-        <button type="submit" style={{background:"#1976d2",color:"#fff",border:"none",borderRadius:4,padding:8,marginTop:8}}>Sign Up</button>
-      </form>
-      <p>{msg}</p>
+    <div className="container py-5" style={{ maxWidth: '500px' }}>
+      <h2>Mentor Signup</h2>
+      {message ? <div className="alert alert-success">{message}</div> : (
+        <form onSubmit={handleSubmit}>
+          <input name="name" className="form-control mb-3" placeholder="Full Name" value={form.name} onChange={handleChange} required />
+          <input type="email" name="email" className="form-control mb-3" placeholder="Email" value={form.email} onChange={handleChange} required />
+          <input name="field" className="form-control mb-3" placeholder="Field of Expertise" value={form.field} onChange={handleChange} required />
+          <input name="location" className="form-control mb-3" placeholder="Location (City, Region)" value={form.location} onChange={handleChange} />
+          <input name="contact" className="form-control mb-3" placeholder="Contact Info (optional)" value={form.contact} onChange={handleChange} />
+          <button type="submit" className="btn btn-primary w-100">Sign Up as Mentor</button>
+        </form>
+      )}
     </div>
   );
 }
+
 export default MentorSignup;

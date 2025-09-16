@@ -1,0 +1,16 @@
+[
+  {
+    "fullName": "john",
+    "email": "johndoe2@gmail.com",
+    "password": "okayy",
+    "currentClass": "12",
+    "age": "18"
+  },
+  {
+    "fullName": "random",
+    "email": "merandom21@gmail.com",
+    "password": "accha",
+    "currentClass": "12",
+    "age": "18"
+  }
+]

@@ -1,51 +1,89 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function Signup() {
+function Signup({ onSignup }) {
+  const [form, setForm] = useState({ fullName:'', email:'', password:'', currentClass:'', age:'' });
+  const [error, setError] = useState('');
   const navigate = useNavigate();
-  const [email, setEmail] = useState('');
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [error,setError] = useState('');
-  const [success,setSuccess] = useState('');
 
-  const handleSubmit = async e => {
+  const change = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+
+  const submit = async (e) => {
     e.preventDefault();
     setError('');
-    setSuccess('');
+    if (Object.values(form).some(v => !v)) {
+      setError('Please fill all fields');
+      return;
+    }
+
     try {
-      const res = await fetch('/api/signup', {
+      // Replace URL with your backend server address or proxy setup
+      const res = await fetch('http://localhost:5000/api/signup', {
         method: 'POST',
-        headers: {'Content-Type':'application/json'},
-        body: JSON.stringify({email, username, password})
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form)
       });
-      const data = await res.json();
-      if (data.success) {
-        setSuccess('Signup successful! You can login now.');
-        setTimeout(() => navigate('/login'), 1500);
-      } else {
-        setError(data.message || 'Signup failed');
+
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.message || 'Signup failed');
       }
-    } catch(e) {
-      setError('Server error');
+
+      const user = await res.json();
+      onSignup(user);
+      navigate('/dashboard');
+    } catch (err) {
+      setError(err.message);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{maxWidth:320,margin:'auto'}}>
-      <h3>Signup</h3>
-      {error && <div style={{color:'red'}}>{error}</div>}
-      {success && <div style={{color:'green'}}>{success}</div>}
-      <div>
-        <input type="text" placeholder="Username" required value={username} onChange={e=>setUsername(e.target.value)} />
-      </div>
-      <div>
-        <input type="email" placeholder="Email" required value={email} onChange={e=>setEmail(e.target.value)} />
-      </div>
-      <div>
-        <input type="password" placeholder="Password" required value={password} onChange={e=>setPassword(e.target.value)} />
-      </div>
-      <button type="submit">Signup</button>
+    <form onSubmit={submit} className="container mt-5" style={{ maxWidth: '450px' }}>
+      <h2>Signup</h2>
+      {error && <div className="alert alert-danger">{error}</div>}
+      <input
+        type="text"
+        name="fullName"
+        placeholder="Full Name"
+        className="form-control mb-3"
+        value={form.fullName}
+        onChange={change}
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        className="form-control mb-3"
+        value={form.email}
+        onChange={change}
+      />
+      <input
+        type="text"
+        name="currentClass"
+        placeholder="Current Class"
+        className="form-control mb-3"
+        value={form.currentClass}
+        onChange={change}
+      />
+      <input
+        type="number"
+        min="10"
+        max="100"
+        name="age"
+        placeholder="Age"
+        className="form-control mb-3"
+        value={form.age}
+        onChange={change}
+      />
+      <input
+        type="password"
+        name="password"
+        placeholder="Password"
+        className="form-control mb-3"
+        value={form.password}
+        onChange={change}
+      />
+      <button type="submit" className="btn btn-success w-100">Sign Up</button>
     </form>
   );
 }

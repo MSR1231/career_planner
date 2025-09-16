@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 
-// Import all your existing components
+// Import components
 import HomePage from './components/HomePage';
 import Login from './components/Login';
 import Signup from './components/Signup';
@@ -16,269 +16,93 @@ import Chatbot from './components/Chatbot';
 import CollegeList from './components/CollegeList';
 import InternshipList from './components/InternshipList';
 import ScholarshipList from './components/ScholarshipList';
-
-// Import NEW ENHANCED components
-import VoiceChatbot from './components/VoiceChatbot';
 import StudyMaterials from './components/StudyMaterials';
 import ExamGuides from './components/ExamGuides';
 
+// Import data JSONs
+import colleges from './data/colleges.json';
+import internships from './data/internships.json';
+import scholarships from './data/scholarships.json';
+import mentors from './data/mentors.json';
+import studyMaterials from './data/study_materials.json';
+import examGuides from './data/exam_guides.json';
+
 function App() {
-  // State management
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')) || null);
   const [userInterests, setUserInterests] = useState(JSON.parse(localStorage.getItem('userInterests')) || {});
   const [userLocation, setUserLocation] = useState(localStorage.getItem('userLocation') || '');
-  const [showVoiceChat, setShowVoiceChat] = useState(false);
 
-  // Persist user data
+  // Sync localStorage with state
+  useEffect(() => {
+    localStorage.setItem('user', JSON.stringify(user));
+  }, [user]);
   useEffect(() => {
     localStorage.setItem('userInterests', JSON.stringify(userInterests));
   }, [userInterests]);
-
   useEffect(() => {
     localStorage.setItem('userLocation', userLocation);
   }, [userLocation]);
 
-  // Handlers
-  const handleLogin = (userData) => {
-    setUser(userData);
-    localStorage.setItem('user', JSON.stringify(userData));
-  };
-
-  const handleLogout = () => {
+  const logout = () => {
     setUser(null);
-    localStorage.removeItem('user');
-    localStorage.removeItem('userInterests');
-    localStorage.removeItem('userLocation');
     setUserInterests({});
     setUserLocation('');
-    setShowVoiceChat(false);
+    localStorage.clear();
   };
 
   return (
     <Router>
-      <div className="App">
-        {/* ENHANCED NAVIGATION */}
-        {user && (
-          <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div className="container">
-              <Link className="navbar-brand" to="/dashboard">
-                🎓 Career Planner
-              </Link>
-              <button 
-                className="navbar-toggler" 
-                type="button" 
-                data-bs-toggle="collapse" 
-                data-bs-target="#navbarNav"
-              >
-                <span className="navbar-toggler-icon"></span>
-              </button>
-              <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav me-auto">
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/dashboard">🏠 Dashboard</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/career-paths">🎯 Career Paths</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/study-materials">📚 Study Materials</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/exam-guides">📝 Exam Guides</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/colleges">🏫 Colleges</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/scholarships">💰 Scholarships</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/mentors">👨‍🏫 Mentors</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/quiz">🧠 Quiz</Link>
-                  </li>
-                </ul>
-                <ul className="navbar-nav">
-                  <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                      👋 {user.fullName || user.username}
-                    </a>
-                    <ul className="dropdown-menu">
-                      <li><span className="dropdown-item-text">Class: {user.currentClass || '12'}</span></li>
-                      <li><hr className="dropdown-divider" /></li>
-                      <li><button className="dropdown-item" onClick={handleLogout}>Logout</button></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        )}
-
-        {/* ROUTES */}
-        <Routes>
-          <Route 
-            path="/" 
-            element={!user ? <HomePage /> : <Navigate to="/dashboard" />} 
-          />
-          <Route 
-            path="/login" 
-            element={!user ? <Login onLogin={handleLogin} /> : <Navigate to="/dashboard" />} 
-          />
-          <Route 
-            path="/signup" 
-            element={!user ? <Signup /> : <Navigate to="/dashboard" />} 
-          />
-          
-          {/* Protected Routes */}
-          <Route 
-            path="/dashboard" 
-            element={user ? (
-              <Dashboard 
-                user={user} 
-                userInterests={userInterests} 
-                userLocation={userLocation} 
-              />
-            ) : <Navigate to="/login" />} 
-          />
-          <Route 
-            path="/quiz" 
-            element={user ? (
-              <Quiz 
-                user={user}
-                userInterests={userInterests}
-                setUserInterests={setUserInterests}
-              />
-            ) : <Navigate to="/login" />} 
-          />
-          <Route 
-            path="/career-paths" 
-            element={user ? <CareerPaths user={user} /> : <Navigate to="/login" />} 
-          />
-          <Route 
-            path="/mentors" 
-            element={user ? <Mentors user={user} /> : <Navigate to="/login" />} 
-          />
-          <Route 
-            path="/mentor-signup" 
-            element={user ? <MentorSignup /> : <Navigate to="/login" />} 
-          />
-          <Route 
-            path="/colleges" 
-            element={user ? (
-              <CollegeList 
-                user={user}
-                userInterests={userInterests} 
-                userLocation={userLocation}
-              />
-            ) : <Navigate to="/login" />} 
-          />
-          <Route 
-            path="/internships" 
-            element={user ? <InternshipList user={user} /> : <Navigate to="/login" />} 
-          />
-          <Route 
-            path="/scholarships" 
-            element={user ? <ScholarshipList user={user} /> : <Navigate to="/login" />} 
-          />
-
-          {/* NEW ENHANCED ROUTES */}
-          <Route 
-            path="/study-materials" 
-            element={user ? <StudyMaterials user={user} /> : <Navigate to="/login" />} 
-          />
-          <Route 
-            path="/exam-guides" 
-            element={user ? <ExamGuides user={user} /> : <Navigate to="/login" />} 
-          />
-        </Routes>
-
-        {/* FLOATING VOICE CHAT BUTTON */}
-        {user && (
-          <button 
-            className="voice-chat-trigger"
-            onClick={() => setShowVoiceChat(true)}
-            style={{
-              position: 'fixed',
-              bottom: '20px',
-              right: '20px',
-              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-              color: 'white',
-              border: 'none',
-              padding: '15px 20px',
-              borderRadius: '50px',
-              fontSize: '1rem',
-              fontWeight: '600',
-              cursor: 'pointer',
-              boxShadow: '0 4px 20px rgba(102, 126, 234, 0.3)',
-              zIndex: 999,
-              animation: 'pulse 2s infinite',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px'
-            }}
-            title="Ask AI Mentor anything about your career!"
-          >
-            🎤 AI Mentor
+      <nav className="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+        <div className="container">
+          <Link className="navbar-brand fw-bold" to="/">Career Planner</Link>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu"
+                  aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon" />
           </button>
-        )}
-
-        {/* VOICE CHATBOT COMPONENT */}
-        <VoiceChatbot 
-          user={user}
-          isOpen={showVoiceChat}
-          onClose={() => setShowVoiceChat(false)}
-        />
-
-        {/* EXISTING CHATBOT */}
-        {user && (
-          <div className="position-fixed bottom-0 end-0 p-3" style={{ zIndex: 998 }}>
-            <Chatbot />
+          <div className="collapse navbar-collapse" id="navMenu">
+            <ul className="navbar-nav ms-auto gap-3">
+              {user ? (
+                <>
+                  <li className="nav-item"><Link to="/dashboard" className="nav-link">Dashboard</Link></li>
+                  <li className="nav-item"><Link to="/quiz" className="nav-link">Quiz</Link></li>
+                  <li className="nav-item"><Link to="/colleges" className="nav-link">Colleges</Link></li>
+                  <li className="nav-item"><Link to="/internships" className="nav-link">Internships</Link></li>
+                  <li className="nav-item"><Link to="/scholarships" className="nav-link">Scholarships</Link></li>
+                  <li className="nav-item"><Link to="/career-paths" className="nav-link">Career Paths</Link></li>
+                  <li className="nav-item"><Link to="/mentors" className="nav-link">Mentors</Link></li>
+                  <li className="nav-item"><Link to="/study-materials" className="nav-link">Study Materials</Link></li>
+                  <li className="nav-item"><Link to="/exam-guides" className="nav-link">Exam Guides</Link></li>
+                  <li className="nav-item">
+                    <button className="btn btn-warning btn-sm" onClick={logout}>Logout</button>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li className="nav-item"><Link to="/login" className="nav-link">Login</Link></li>
+                  <li className="nav-item"><Link to="/signup" className="nav-link">Sign Up</Link></li>
+                </>
+              )}
+            </ul>
           </div>
-        )}
+        </div>
+      </nav>
 
-        {/* ANIMATIONS */}
-        <style jsx>{`
-          @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-          }
-          
-          .voice-chat-trigger:hover {
-            transform: translateY(-2px) !important;
-            box-shadow: 0 6px 25px rgba(102, 126, 234, 0.4) !important;
-            transition: all 0.3s ease !important;
-          }
-
-          @media (max-width: 768px) {
-            .voice-chat-trigger {
-              bottom: 10px !important;
-              right: 10px !important;
-              padding: 12px 16px !important;
-              font-size: 0.9rem !important;
-            }
-          }
-
-          .navbar-nav .nav-link {
-            border-radius: 8px;
-            margin: 0 4px;
-            transition: all 0.3s ease;
-          }
-
-          .navbar-nav .nav-link:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            transform: translateY(-1px);
-          }
-
-          .dropdown-menu {
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            border: none;
-          }
-        `}</style>
-      </div>
+      <Routes>
+        <Route path="/" element={<HomePage user={user} />} />
+        <Route path="/login" element={!user ? <Login onLogin={setUser} /> : <Navigate to="/dashboard" />} />
+        <Route path="/signup" element={!user ? <Signup onSignup={setUser} /> : <Navigate to="/dashboard" />} />
+        <Route path="/dashboard" element={user ? <Dashboard user={user} userInterests={userInterests} userLocation={userLocation} /> : <Navigate to="/login" />} />
+        <Route path="/quiz" element={user ? <Quiz setUserInterests={setUserInterests} setUserLocation={setUserLocation} /> : <Navigate to="/login" />} />
+        <Route path="/colleges" element={user ? <CollegeList colleges={colleges} userInterests={userInterests} userLocation={userLocation} /> : <Navigate to="/login" />} />
+        <Route path="/internships" element={user ? <InternshipList internships={internships} /> : <Navigate to="/login" />} />
+        <Route path="/scholarships" element={user ? <ScholarshipList scholarships={scholarships} /> : <Navigate to="/login" />} />
+        <Route path="/career-paths" element={user ? <CareerPaths userInterests={userInterests} /> : <Navigate to="/login" />} />
+        <Route path="/mentors" element={user ? <Mentors mentors={mentors} /> : <Navigate to="/login" />} />
+        <Route path="/mentor-signup" element={user ? <MentorSignup /> : <Navigate to="/login" />} />
+        <Route path="/study-materials" element={user ? <StudyMaterials materials={studyMaterials} /> : <Navigate to="/login" />} />
+        <Route path="/exam-guides" element={user ? <ExamGuides examGuides={examGuides} /> : <Navigate to="/login" />} />
+        <Route path="*" element={<div className="container my-5"><h1>404 - Not Found</h1></div>} />
+      </Routes>
     </Router>
   );
 }

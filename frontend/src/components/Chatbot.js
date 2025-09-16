@@ -1,52 +1,37 @@
-// src/Chatbot.js
 import React, { useState } from 'react';
 
 function Chatbot() {
-  const [messages, setMessages] = useState([]);
-  const [userInput, setUserInput] = useState('');
+  const [messages, setMessages] = useState([
+    { user: false, text: 'Hello! Ask me anything about career planning.' }
+  ]);
+  const [input, setInput] = useState('');
 
-  const handleInputChange = (event) => setUserInput(event.target.value);
+  const sendMessage = () => {
+    if (!input.trim()) return;
+    const userMsg = { user: true, text: input };
+    setMessages(prev => [...prev, userMsg]);
 
-  const handleSendMessage = () => {
-    if (userInput.trim()) {
-      const newMessages = [...messages, { user: true, text: userInput }];
-      setMessages(newMessages);
-      // Very simple logic; you can connect to backend for AI/chat in future
-      setTimeout(() => {
-        setMessages([
-          ...newMessages,
-          { user: false, text: `You said: ${userInput}` }
-        ]);
-      }, 600);
-      setUserInput('');
-    }
+    // Dummy bot reply after delay
+    setTimeout(() => {
+      setMessages(prev => [...prev, { user: false, text: `You said: ${input}` }]);
+    }, 500);
+
+    setInput('');
   };
 
   return (
-    <div style={{border: '1px solid #ddd', borderRadius: 8, width: 320, margin: '16px auto', padding: 12}}>
-      <h4 style={{marginBottom: 10}}>📢 Student Chatbot</h4>
-      <div style={{height:120, overflowY:'auto', color:'#222', fontSize:15, marginBottom:6}}>
-        {messages.map((m, i) => (
-          <div key={i} style={{textAlign: m.user ? 'right' : 'left', margin:'2px 0'}}>
-            <span style={{
-              background: m.user ? '#d0f1ff' : '#f2f2f2',
-              padding:'4px 8px',
-              borderRadius: 12,
-              display: 'inline-block'
-            }}>{m.text}</span>
+    <div style={{ width: 350, border: '1px solid #007bff', borderRadius: 8, padding: 10, background: '#f0f8ff' }}>
+      <div style={{ height: 200, overflowY: 'auto', marginBottom: 8 }}>
+        {messages.map((msg, idx) => (
+          <div key={idx} style={{textAlign: msg.user ? 'right' : 'left', margin: '5px 0'}}>
+            <span style={{display: 'inline-block', padding: '5px 10px', borderRadius: 15, background: msg.user ? '#007bff' : '#e0e0e0', color: msg.user ? '#fff' : '#000'}}>
+              {msg.text}
+            </span>
           </div>
         ))}
       </div>
-      <div style={{display:'flex', gap:2}}>
-        <input
-          type="text"
-          value={userInput}
-          onChange={handleInputChange}
-          style={{flex:1, borderRadius: 6, border:'1px solid #aaa', padding:4}}
-          placeholder="Type a message"
-        />
-        <button onClick={handleSendMessage} style={{marginLeft: 2, padding: '4px 10px'}}>Send</button>
-      </div>
+      <input type="text" className="form-control" value={input} onChange={e => setInput(e.target.value)} onKeyDown={e => e.key==='Enter' && sendMessage()} placeholder="Type here..." />
+      <button className="btn btn-primary mt-1 w-100" onClick={sendMessage}>Send</button>
     </div>
   );
 }
