@@ -12,5 +12,12 @@
     "password": "okayy",
     "currentClass": "12",
     "age": "18"
+  },
+  {
+    "fullName": "Ashu",
+    "email": "abc@gmail.com",
+    "password": "12345@1",
+    "currentClass": "12",
+    "age": "17"
   }
 ]

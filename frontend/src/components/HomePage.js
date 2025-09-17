@@ -1,4 +1,6 @@
+
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './HomePage.css';
 
 const images = [
@@ -58,7 +60,7 @@ const HomePage = ({ user }) => {
             <p>Learn from mentors who guide your career journey.</p>
           </div>
         </div>
-        <button className="btn-glow">Get Started</button>
+        <Link to="/dashboard" className="btn-glow">Get Started</Link>
       </section>
     </div>
   );
