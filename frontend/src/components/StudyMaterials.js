@@ -15,7 +15,33 @@ function StudyMaterials({ materials }) {
               <div className="card-body">
                 <h5 className="card-title">{mat.title}</h5>
                 <p>{mat.description}</p>
-                <a href={mat.url} target="_blank" rel="noreferrer" className="btn btn-outline-primary">View Material</a>
+                
+                {/* Download button */}
+                {mat.download_link && (
+                  <a
+                    href={mat.download_link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn btn-primary me-2"
+                  >
+                    Download
+                  </a>
+                )}
+
+                {/* Preview button */}
+                {mat.preview_link && (
+                  <a
+                    href={mat.preview_link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn btn-outline-secondary"
+                  >
+                    Preview
+                  </a>
+                )}
+
+                {/* Optional: show Free badge */}
+                {mat.free && <span className="badge bg-success ms-2">Free</span>}
               </div>
             </div>
           </div>
