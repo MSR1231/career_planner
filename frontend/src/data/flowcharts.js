@@ -1,45 +1,85 @@
-// frontend/src/data/flowcharts.js
-
 export const flowcharts = {
   "Science & Technology": `
 graph TD
-    MBBS --> Doctor[Doctor | Industries: Hospitals, Clinics, Research | Exams: NEET PG, MD/MS | Entrepreneurship: Private Clinic]
-    MBBS --> Surgeon[Surgeon | Industries: Hospitals, Clinics | Exams: NEET PG, MS | Entrepreneurship: Own Clinic]
-    BDS --> Dentist[Dentist | Industries: Clinics, Hospitals | Exams: NEET-DENTAL, MDS | Private Practice]
-    BAMS --> AyurvedicDoctor[Ayurvedic/Homeopathy Doctor | Industries: Wellness centers, Clinics | Exams: Licensing | Entrepreneurship: Own Clinic]
-    BScNursing --> Nurse[Nurse | Industries: Hospitals, Healthcare | Higher Education: GNM, PG Nursing | Private Jobs: Hospitals]
-    BPharm --> Pharmacist[Pharmacist | Industries: Pharma Companies, Hospitals | Exams/Higher Education: GPAT, MBA Pharma | Entrepreneurship: Pharmacy Shop]
-    BTech --> SoftwareEngineer[Software Engineer | Industries: IT, Software | Exams: GATE, Certifications | Entrepreneurship: Startup]
-    BTech --> CivilEngineer[Civil Engineer | Industries: Construction, Manufacturing | Exams: GATE | Entrepreneurship: Consultancy]
-    BScCS --> DataAnalyst[Data Analyst | Industries: IT, Analytics | Higher Education: MSc, Certifications | Entrepreneurship: Freelance Projects]
-    BArch --> Architect[Architect | Industries: Construction, Urban Planning | Exams/Higher Education: NATA, M.Arch | Entrepreneurship: Design Studio]
-    Diploma --> Technician[Technician | Industries: Manufacturing, Production | Certifications | Entrepreneurship: Service Center]
+  MBBS("MBBS"):::degree --> Doctor["Doctor: Hospitals, Clinics, Research, NEET PG, MD/MS"]:::career
+  MBBS --> Surgeon["Surgeon: Hospitals, NEET PG, MS"]:::career
+  BDS("BDS"):::degree --> Dentist["Dentist: Clinics, NEET-DENTAL"]:::career
+  BAMS("BAMS"):::degree --> AyurvedicDoctor["Ayurvedic Doctor: Licensing"]:::career
+  BScNursing("BSc Nursing"):::degree --> Nurse["Nurse: GNM, PG Nursing"]:::career
+  BPharm("BPharm"):::degree --> Pharmacist["Pharmacist: GPAT, MBA Pharma"]:::career
+  BTech("BTech"):::degree --> SoftwareEngineer["Software Engineer: GATE"]:::career
+  BTech --> CivilEngineer["Civil Engineer: GATE"]:::career
+  BScCS("BSc CS"):::degree --> DataAnalyst["Data Analyst: MSc, Certifications"]:::career
+  BArch("BArch"):::degree --> Architect["Architect: NATA, M.Arch"]:::career
+  Diploma("Diploma"):::degree --> Technician["Technician: Certifications"]:::career
+
+  classDef degree fill:#4A90E2,color:#fff,stroke:#1C5CBC,stroke-width:2px,font-size:18px;
+  classDef career fill:#F5A623,color:#000,stroke:#D48806,stroke-width:2px,font-size:16px;
+  
+  click Doctor "https://en.wikipedia.org/wiki/Physician" "More about Doctor careers"
+  click Surgeon "https://en.wikipedia.org/wiki/Surgeon" "More about Surgeon careers"
+  click Dentist "https://en.wikipedia.org/wiki/Dentistry" "More about Dentistry"
+  click AyurvedicDoctor "https://en.wikipedia.org/wiki/Ayurveda" "About Ayurvedic Medicine"
+  click Nurse "https://en.wikipedia.org/wiki/Nursing" "Nursing careers"
+  click Pharmacist "https://en.wikipedia.org/wiki/Pharmacist" "Pharmacist profession"
+  click SoftwareEngineer "https://en.wikipedia.org/wiki/Software_engineer" "Software Engineer role"
+  click CivilEngineer "https://en.wikipedia.org/wiki/Civil_engineering" "Civil Engineering"
+  click DataAnalyst "https://en.wikipedia.org/wiki/Data_analysis" "Data Analyst"
+  click Architect "https://en.wikipedia.org/wiki/Architectural_profession" "Architect profession"
+  click Technician "https://en.wikipedia.org/wiki/Technician" "Technician information"
 `,
 
   "Arts & Humanities": `
 graph TD
-    BA --> Writer[Writer | Industries: Media, Publishing, Freelance | Higher Education: MA, NET | Entrepreneurship: Freelance Writing]
-    BA --> Teacher[Teacher | Industries: Schools, Coaching | Exams: TET, NET | Higher Education: M.Ed | Entrepreneurship: Coaching Center]
-    BFA --> Artist[Artist | Industries: Cultural, Media | Higher Education: PG Art | Entrepreneurship: Studio / Freelance]
-    Music --> Performer[Performer | Industries: Cultural, Events | Certifications | Entrepreneurship: Own Studio / Freelance]
-    BCom --> Accountant[Accountant | Industries: Banking, Corporates | Exams/Higher Ed: CA, CMA, CS | Entrepreneurship: Accounting Firm]
-    BBA --> Manager[Manager | Industries: Business, Marketing | Higher Education: MBA | Entrepreneurship: Startup / Consulting]
+  BA("BA"):::degree --> Writer["Writer: MA, NET"]:::career
+  BA --> Teacher["Teacher: TET, NET"]:::career
+  BFA("BFA"):::degree --> Artist["Artist: PG Art"]:::career
+  Music("Music"):::degree --> Performer["Performer: Cultural Events"]:::career
+  BCom("BCom"):::degree --> Accountant["Accountant: CA, CMA, CS"]:::career
+  BBA("BBA"):::degree --> Manager["Manager: MBA"]:::career
+
+  classDef degree fill:#7ED6DF,color:#000,stroke:#2CA3C9,stroke-width:2px,font-size:18px;
+  classDef career fill:#FFD460,color:#000,stroke:#B29A2F,stroke-width:2px,font-size:16px;
+
+  click Writer "https://en.wikipedia.org/wiki/Writer"
+  click Teacher "https://en.wikipedia.org/wiki/Teacher"
+  click Artist "https://en.wikipedia.org/wiki/Artist"
+  click Performer "https://en.wikipedia.org/wiki/Performer"
+  click Accountant "https://en.wikipedia.org/wiki/Accountant"
+  click Manager "https://en.wikipedia.org/wiki/Manager"
 `,
 
   "Commerce & Finance": `
 graph TD
-    BCom --> Accountant[Accountant | Industries: Banking, Audit, Corporate | Exams/Higher Ed: CA, CMA, CS, MBA Finance | Entrepreneurship: Accounting Firm]
-    BCom --> FinanceExecutive[Finance Executive | Industries: Banks, Corporates | Higher Education: MBA, Certifications | Entrepreneurship: Consulting]
-    BBA --> Manager[Manager | Industries: Business, Marketing | Higher Education: MBA | Entrepreneurship: Startup / Consulting]
-    Economics --> Analyst[Analyst | Industries: Banks, Corporates, Research | Higher Education: MBA, CFA | Entrepreneurship: Consultancy]
-    CommerceVocational --> TaxConsultant[Tax Consultant | Industries: Financial Services | Certifications: CPA, GST Practitioner | Entrepreneurship: Tax Firm]
+  BCom("BCom"):::degree --> Accountant["Accountant: CA, MBA Finance"]:::career
+  BCom --> FinanceExecutive["Finance Executive: MBA"]:::career
+  BBA("BBA"):::degree --> Manager["Manager: MBA"]:::career
+  Economics("Economics"):::degree --> Analyst["Analyst: CFA"]:::career
+  CommerceVocational("Commerce Vocational"):::degree --> TaxConsultant["Tax Consultant: CPA, GST"]:::career
+
+  classDef degree fill:#A971D8,color:#F9F9F9,stroke:#6525B4,stroke-width:2px,font-size:18px;
+  classDef career fill:#FFD4D4,color:#000,stroke:#B1515F,stroke-width:2px,font-size:16px;
+
+  click Accountant "https://en.wikipedia.org/wiki/Accountant"
+  click FinanceExecutive "https://en.wikipedia.org/wiki/Financial_adviser"
+  click Manager "https://en.wikipedia.org/wiki/Manager"
+  click Analyst "https://en.wikipedia.org/wiki/Financial_analyst"
+  click TaxConsultant "https://en.wikipedia.org/wiki/Tax_advisor"
 `,
 
   "Vocational & Practical": `
 graph TD
-    DiplomaVoc --> Technician[Technician | Industries: Manufacturing, IT, Healthcare | Certifications: Job-specific | Entrepreneurship: Service Center]
-    ITCert --> SoftwareDeveloper[Software Developer | Industries: IT, Startups | Certifications: Python, Java, Cloud | Entrepreneurship: Freelance Projects]
-    Hospitality --> HotelManager[Hotel Manager | Industries: Tourism, Events | Certifications: Food Safety, Management | Entrepreneurship: Own Hotel / Event Company]
-    TradeCraft --> Artisan[Artisan | Industries: Small Business, Freelance | Certifications: Skill-based | Entrepreneurship: Own Business / Workshop]
+  DiplomaVoc("Diploma/Vocational"):::degree --> Technician["Technician"]:::career
+  ITCert("IT Certification"):::degree --> SoftwareDeveloper["Software Developer"]:::career
+  Hospitality("Hospitality"):::degree --> HotelManager["Hotel Manager"]:::career
+  TradeCraft("Trade/Craft"):::degree --> Artisan["Artisan"]:::career
+
+  classDef degree fill:#F7A541,color:#000,stroke:#C97806,stroke-width:2px,font-size:18px;
+  classDef career fill:#F9D67E,color:#000,stroke:#B18E29,stroke-width:2px,font-size:16px;
+
+  click Technician "https://en.wikipedia.org/wiki/Technician"
+  click SoftwareDeveloper "https://en.wikipedia.org/wiki/Software_developer"
+  click HotelManager "https://en.wikipedia.org/wiki/Hotel_manager"
+  click Artisan "https://en.wikipedia.org/wiki/Artisan"
 `
 };
