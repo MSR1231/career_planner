@@ -1,99 +1,61 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Signup({ onSignup }) {
-  const [form, setForm] = useState({
-    fullName: "",
-    email: "",
-    password: "",
-    currentClass: "",
-    age: "",
-  });
-  const [error, setError] = useState("");
+export default function Signup({ onSignup }) {
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  const change = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const submit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setError("");
-    if (Object.values(form).some((v) => !v)) {
-      setError("Please fill all fields");
+
+    const storedUsers = JSON.parse(localStorage.getItem("signedUpUsers")) || [];
+    const emailExists = storedUsers.some((u) => u.email === email);
+
+    if (emailExists) {
+      setError("User with this email already exists");
       return;
     }
-    try {
-      const res = await fetch("http://localhost:5000/api/signup", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
 
-      if (!res.ok) {
-        const data = await res.json();
-        throw new Error(data.message || "Signup failed");
-      }
+    const newUser = { email, name, password };
+    storedUsers.push(newUser);
+    localStorage.setItem("signedUpUsers", JSON.stringify(storedUsers));
 
-      const user = await res.json();
-      onSignup(user);
-      navigate("/dashboard");
-    } catch (err) {
-      setError(err.message);
-    }
+    onSignup(newUser);
+    navigate("/dashboard");
   };
 
   return (
-    <form onSubmit={submit} className="container mt-5" style={{ maxWidth: "450px" }}>
-      <h2>Signup</h2>
-      {error && <div className="alert alert-danger">{error}</div>}
-      <input
-        type="text"
-        name="fullName"
-        placeholder="Full Name"
-        className="form-control mb-3"
-        value={form.fullName}
-        onChange={change}
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        className="form-control mb-3"
-        value={form.email}
-        onChange={change}
-      />
-      <input
-        type="text"
-        name="currentClass"
-        placeholder="Current Class"
-        className="form-control mb-3"
-        value={form.currentClass}
-        onChange={change}
-      />
-      <input
-        type="number"
-        min="10"
-        max="100"
-        name="age"
-        placeholder="Age"
-        className="form-control mb-3"
-        value={form.age}
-        onChange={change}
-      />
-      <input
-        type="password"
-        name="password"
-        placeholder="Password"
-        className="form-control mb-3"
-        value={form.password}
-        onChange={change}
-      />
-      <button type="submit" className="btn btn-success w-100">
-        Sign Up
-      </button>
-    </form>
+    <div style={{ maxWidth: "400px", margin: "2rem auto" }}>
+      <h2>Sign Up</h2>
+      {error && <div style={{ color: "red" }}>{error}</div>}
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+          minLength={6}
+        />
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
   );
 }
-
-export default Signup;

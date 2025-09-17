@@ -19,5 +19,19 @@
     "password": "12345@1",
     "currentClass": "12",
     "age": "17"
+  },
+  {
+    "fullName": "hello",
+    "email": "new02@gmail.com",
+    "password": "okayy",
+    "currentClass": "12",
+    "age": "18"
+  },
+  {
+    "fullName": "new",
+    "email": "new01@gmail.com",
+    "password": "new#1",
+    "currentClass": "12",
+    "age": "18"
   }
 ]

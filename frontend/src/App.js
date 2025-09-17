@@ -17,11 +17,13 @@ import MentorSignup from "./components/MentorSignup";
 import Chatbot from "./components/Chatbot";
 import CollegeList from "./components/CollegeList";
 import InternshipList from "./components/InternshipList";
+import CareerPaths from "./components/CareerPaths";
+
 import ScholarshipList from "./components/ScholarshipList";
 import StudyMaterials from "./components/StudyMaterials";
 import ExamGuides from "./components/ExamGuides";
 
-import CareerFlowchartReact from "./components/CareerFlowchartReact"; // Your new flowchart component
+import CareerFlowchartReact from "./components/CareerFlowchartReact";
 
 import colleges from "./data/colleges.json";
 import internships from "./data/internships.json";
@@ -128,7 +130,13 @@ function App() {
         <Route path="/career-flowchart" element={<CareerFlowchartReact />} />
         <Route
           path="/quiz"
-          element={<Quiz setUserInterests={setUserInterests} setUserLocation={setUserLocation} />}
+          element={
+            user ? (
+              <Quiz setUserInterests={setUserInterests} setUserLocation={setUserLocation} />
+            ) : (
+              <Navigate to="/login" replace />
+            )
+          }
         />
         <Route
           path="/colleges"
@@ -139,6 +147,7 @@ function App() {
         <Route path="/mentors" element={<Mentors mentors={mentors} />} />
         <Route path="/mentor-signup" element={<MentorSignup />} />
         <Route path="/study-materials" element={<StudyMaterials materials={studyMaterials} />} />
+        <Route path="/career-paths" element={<CareerPaths />} />
         <Route path="/exam-guides" element={<ExamGuides examGuides={examGuides} />} />
         <Route
           path="/login"

@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "name": "Doctor",
+    "description": "Make a difference in people's lives by diagnosing and treating illnesses. Specialize in surgery, pediatrics, cardiology, or research to find your calling.",
+    "resources": [
+      {
+        "title": "Medical Council of India",
+        "url": "https://www.mciindia.org"
+      },
+      {
+        "title": "NEET UG Exam Info",
+        "url": "https://ntaneet.nic.in"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Software Engineer",
+    "description": "Innovate and build the future by writing code and solving complex problems in software, AI, or cybersecurity fields.",
+    "resources": [
+      {
+        "title": "FreeCodeCamp",
+        "url": "https://www.freecodecamp.org"
+      },
+      {
+        "title": "GitHub Learning Lab",
+        "url": "https://lab.github.com"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Civil Engineer",
+    "description": "Shape cities and infrastructure by designing bridges, roads, and buildings with sustainability and safety in mind.",
+    "resources": [
+      {
+        "title": "Indian Roads Congress",
+        "url": "https://www.irc.nic.in"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Teacher",
+    "description": "Empower the next generation by sharing knowledge, inspiring learning, and shaping futures.",
+    "resources": [
+      {
+        "title": "CBSE Teacher Resources",
+        "url": "http://cbseacademic.nic.in"
+      },
+      {
+        "title": "National Institute of Open Schooling",
+        "url": "https://nios.ac.in"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Entrepreneur",
+    "description": "Turn ideas into reality by starting your own venture and creating value for society and yourself.",
+    "resources": [
+      {
+        "title": "Startup India",
+        "url": "https://www.startupindia.gov.in"
+      },
+      {
+        "title": "MyGov Entrepreneurship",
+        "url": "https://www.mygov.in/group-discussion/group/entrepreneurship"
+      }
+    ]
+  }
+]

@@ -1,63 +1,48 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
-function Login({ onLogin }) {
-  const [form, setForm] = useState({ email: "", password: "" });
-  const [error, setError] = useState("");
-  const navigate = useNavigate();
+const defaultUsers = [
+  { email: "user@example.com", password: "password123", name: "John Doe" }
+];
 
-  const change = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+export default function Login({ onLogin }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
 
-  const submit = async (e) => {
+  const storedUsers = JSON.parse(localStorage.getItem("")) || [];
+  const users = [...defaultUsers, ...storedUsers];
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setError("");
-    try {
-      const res = await fetch("http://localhost:5000/api/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-
-      if (!res.ok) {
-        const data = await res.json();
-        throw new Error(data.message || "Login failed");
-      }
-
-      const user = await res.json();
+    const user = users.find(u => u.email === email && u.password === password);
+    if (user) {
       onLogin(user);
-      navigate("/dashboard");
-    } catch (err) {
-      setError(err.message);
+    } else {
+      setError("Invalid email or password");
     }
   };
 
   return (
-    <form onSubmit={submit} className="container mt-5" style={{ maxWidth: "450px" }}>
+    <div style={{ maxWidth: "400px", margin: "2rem auto" }}>
       <h2>Login</h2>
-      {error && <div className="alert alert-danger">{error}</div>}
-      <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        className="form-control mb-3"
-        value={form.email}
-        onChange={change}
-      />
-      <input
-        type="password"
-        name="password"
-        placeholder="Password"
-        className="form-control mb-3"
-        value={form.password}
-        onChange={change}
-      />
-      <button type="submit" className="btn btn-primary w-100">
-        Log In
-      </button>
-    </form>
+      {error && <div style={{ color: "red" }}>{error}</div>}
+      <form onSubmit={handleSubmit}>
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          required
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={e => setPassword(e.target.value)}
+          required
+        />
+        <button type="submit">Login</button>
+      </form>
+    </div>
   );
 }
-
-export default Login;
