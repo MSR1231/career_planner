@@ -13,7 +13,7 @@ function CollegeList({ colleges, userInterests, userLocation }) {
   };
 
   const matchesInterests = (college) => {
-    if(!userInterests || !userInterests[1]) return true;
+    if (!userInterests || !userInterests[1]) return true;
     return typeMap[userInterests[1]]?.includes(college.type);
   };
 
@@ -54,6 +54,7 @@ function CollegeList({ colleges, userInterests, userLocation }) {
                 <p><strong>Affiliation:</strong> {college.affiliation}</p>
                 <p><strong>Fees:</strong> {college.fees}</p>
                 <p><strong>Cutoff:</strong> {college.cutoff}</p>
+                <p><strong>Website:</strong> <a href={college.website} target="_blank" rel="noopener noreferrer">{college.website}</a></p>
               </div>
             </div>
           ))

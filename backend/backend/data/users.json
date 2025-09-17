@@ -1,15 +1,15 @@
 [
   {
-    "fullName": "john",
-    "email": "johndoe2@gmail.com",
-    "password": "okayy",
+    "fullName": "new",
+    "email": "new32@gmail.com",
+    "password": "accha",
     "currentClass": "12",
     "age": "18"
   },
   {
-    "fullName": "random",
-    "email": "merandom21@gmail.com",
-    "password": "accha",
+    "fullName": "hello",
+    "email": "new31@gmail.com",
+    "password": "okayy",
     "currentClass": "12",
     "age": "18"
   }

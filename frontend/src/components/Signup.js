@@ -1,44 +1,50 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Signup({ onSignup }) {
-  const [form, setForm] = useState({ fullName:'', email:'', password:'', currentClass:'', age:'' });
-  const [error, setError] = useState('');
+  const [form, setForm] = useState({
+    fullName: "",
+    email: "",
+    password: "",
+    currentClass: "",
+    age: "",
+  });
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const change = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+  const change = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
   const submit = async (e) => {
     e.preventDefault();
-    setError('');
-    if (Object.values(form).some(v => !v)) {
-      setError('Please fill all fields');
+    setError("");
+    if (Object.values(form).some((v) => !v)) {
+      setError("Please fill all fields");
       return;
     }
-
     try {
-      // Replace URL with your backend server address or proxy setup
-      const res = await fetch('http://localhost:5000/api/signup', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form)
+      const res = await fetch("http://localhost:5000/api/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
       });
 
       if (!res.ok) {
         const data = await res.json();
-        throw new Error(data.message || 'Signup failed');
+        throw new Error(data.message || "Signup failed");
       }
 
       const user = await res.json();
       onSignup(user);
-      navigate('/dashboard');
+      navigate("/dashboard");
     } catch (err) {
       setError(err.message);
     }
   };
 
   return (
-    <form onSubmit={submit} className="container mt-5" style={{ maxWidth: '450px' }}>
+    <form onSubmit={submit} className="container mt-5" style={{ maxWidth: "450px" }}>
       <h2>Signup</h2>
       {error && <div className="alert alert-danger">{error}</div>}
       <input
@@ -83,7 +89,9 @@ function Signup({ onSignup }) {
         value={form.password}
         onChange={change}
       />
-      <button type="submit" className="btn btn-success w-100">Sign Up</button>
+      <button type="submit" className="btn btn-success w-100">
+        Sign Up
+      </button>
     </form>
   );
 }

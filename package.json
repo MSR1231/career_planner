@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "mermaid": "^11.11.0",
+    "react-mermaid2": "^0.1.4",
     "reactflow": "^11.11.4"
   }
 }
